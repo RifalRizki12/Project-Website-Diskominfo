@@ -21,6 +21,11 @@
             </div>
 
             <div class="row">
+                @if (session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    {{session('sukses')}}
+                </div>
+                @endif
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
@@ -37,13 +42,15 @@
                                     </div>
                                 </div>
 
-                                {{-- <div class="form-group row">
+                                <div class="form-group row">
                                     <label for="category" class="col-md-2 col-form-label">kategori :</label>
                                     <div class="col-md-10">
                                         <select name="category_id" class="form-control">
                                             <option value="" class="disable selected">Pilih Kategori</option>
-                                            @foreach ($category as $kategori)
-                                                <option value="{{$kategori->id}}">{{$kategori->name}}</option>
+                                            @foreach ($category as $category)
+                                                <option value="{{$category->id}}" <?php if ($posts->category_id == $category->id) {
+                                                    echo "selected";
+                                                } ?> >{{$category->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -58,25 +65,27 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                </div> --}}
+                                </div>
+
+                                <div class="form-group row{{$errors->has('thumbnail') ? ' has-error' : ''}}">
+                                    <label for="thumbnail" class="col-md-2 col-form-label">Pilih Gambar</label>
+                                    
+                                    <div class="col-md-10">
+                                        <input type="file" name="thumbnail" class="form-control">
+                                        @if($errors->has('thumbnail'))
+                                            <span class="help-block" style="color: red">{{$errors->first('thumbnail')}}</span>
+                                        @endif <br>
+                                        <img src="{{asset('thumbnail/'.$posts->thumbnail)}}" style="width: 50% height:50%;">
+                                    
+                                    </div>
+                                    
+                                </div>
 
                                 <div class="form-group row">
                                     <label for="content" class="col-md-2 col-form-label">Konten</label>
                                     <div class="col-md-10">
                                         <textarea id="editor" name="content" class="form-control" type="text" value="">{{$posts->content}}</textarea>
                                     </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="input-group">
-                                        <span class="input-group-btn">
-                                          <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                                            <i class="fa fa-picture-o"></i> Choose
-                                          </a>
-                                        </span>
-                                        <input id="thumbnail" class="form-control" type="text" name="thumbnail">
-                                    </div>
-                                    <img id="holder" style="margin-top:15px;max-height:100px;">
                                 </div>
                                 
                                 <div class="btn-group btn-group-example mb-3" role="group">
@@ -98,4 +107,10 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('footer')
+{{-- <script type="text/javascript">
+    $(".selectpicker").selectpicker().val({!!json_encode($posts->$tags()->allRelatedIds()) !!}).trigger('change');
+</script> --}}
 @endsection

@@ -19,6 +19,6 @@ class DashboardController extends Controller
             alert()->success('Kamu Berhasil Masuk :)', 'WELCOME :)');
             return redirect('/dashboard');
         }
-        return redirect('/ecomerce');
+        // return redirect('/ecomerce');
     }
 }

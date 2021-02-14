@@ -65,11 +65,6 @@
                                             <label for="userpassword">Password</label>
                                             <input name="password" type="password" class="form-control" id="userpassword" placeholder="Enter password">
                                         </div>
-                
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                            <label class="custom-control-label" for="customControlInline">Remember me</label>
-                                        </div>
                                         
                                         <div class="mt-3">
                                             <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Log In</button>

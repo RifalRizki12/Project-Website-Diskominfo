@@ -57,28 +57,28 @@
                                 @foreach ($posts as $post)
                                 <tr>
                                     
-                                <td>{{$post->id}}</td>
-                                <td>
-                                    <a target="_blank" href="{{route('site.single.post',$post->slug )}}">
-                                        {{$post->title}}
-                                    </a>
-                                </td>
-                                <td>{{$post->user->name}}</td>
-                                <td style="text-align: center">
-                                    <div class="btn-group btn-group-example" role="group">
-
-                                        <button type="button" class="btn btn-primary btn-sm w-xs">
-                                            <a href="{{route('editPost',[$post->id])}}" style="color: white">
-                                                <i class="mdi mdi-account-edit"> Edit</i>
-                                            </a>
-                                        </button>
-                                        <button type="button" class="btn btn-danger btn-sm w-xs">
-                                            <a href="{{route('deletePost',[$post->id])}}" style="color: white" onclick="return confirm('Yakin')">
-                                                <i class="mdi mdi-account-remove"> Hapus</i>
-                                            </a>
-                                        </button>
-                                    </div>
-                                </td>
+                                    <td>{{$post->id}}</td>
+                                    <td>
+                                        <a target="_blank" href="{{route('site.single.post',$post->slug )}}">
+                                            {{str_limit($post->title,20)}}
+                                        </a>
+                                    </td>
+                                    <td>{{$post->user->name}}</td>
+                                    <td style="text-align: center">
+                                        <div class="btn-group btn-group-example" role="group">
+                                        
+                                            <button type="button" class="btn btn-primary btn-sm w-xs">
+                                                <a href="{{route('editPost',[$post->id])}}" style="color: white">
+                                                    <i class="mdi mdi-account-edit"> Edit</i>
+                                                </a>
+                                            </button>
+                                            <button type="button" class="btn btn-danger btn-sm w-xs">
+                                                <a href="{{route('deletePost',[$post->id])}}" style="color: white" onclick="return confirm('Yakin')">
+                                                    <i class="mdi mdi-account-remove"> Hapus</i>
+                                                </a>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 @endforeach
 

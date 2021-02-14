@@ -20,7 +20,7 @@ class DataAdminController extends Controller
     {
         $this->validate($request,[
             'email' => 'required|email|unique:users',
-            'avatar' => 'mimes:jpg,png,jpeg',
+            'avatar' => 'mimes:jpeg,png,jpg,gif,svg',
         ]);
         
         //insert ke tabel Users

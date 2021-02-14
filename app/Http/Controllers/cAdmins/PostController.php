@@ -7,12 +7,15 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Tag;
+use Auth;
+use Storage;
 
 class PostController extends Controller
 {
     public function index()
     {
         $posts = Post::all();
+        // $posts = Auth::user()->posts();
         return view('vAdmins.vPosts.index',compact(['posts']));
     }
 
@@ -28,7 +31,7 @@ class PostController extends Controller
         $this->validate($request,[
             'title' => 'required|min:5',
             'content' => 'required',
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg'
+            'thumbnail' => 'required|mimes:jpeg,png,jpg,gif,svg'
         ]);
         
         $post = new Post;
@@ -52,8 +55,10 @@ class PostController extends Controller
 
     public function edit($id)
     {
+        $category = Category::all();
+        $tags = Tag::all();
         $posts = Post::find($id);
-        return view('vAdmins.vPosts.editPost',compact(['posts']));
+        return view('vAdmins.vPosts.editPost',compact(['posts','category','tags']));
     }
 
     public function update(Request $request,$id)
@@ -63,9 +68,20 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->content = $request->content;
         $post->user_id = auth()->user()->id;
-        $post->save();
+        $post->category_id = $request->category_id;
+        if ($request->hasFile('thumbnail')) {
+            $file = $request->file('thumbnail');
+            $fileName = time().'.'.$file->getClientOriginalExtension();
+            $destinationPath = public_path('/thumbnail');
+            $file->move($destinationPath, $fileName);
 
-        return redirect('posts');
+            $oldFilename = $post->thumbnail;
+            \Storage::delete($oldFilename);
+            $post->thumbnail = $fileName;
+        }
+        $post->save();
+        $post->tags()->sync($request->tags);
+        return redirect('posts')->with('sukses','Post Baru Berhasil Di Edit');
     }
 
     public function delete($id)

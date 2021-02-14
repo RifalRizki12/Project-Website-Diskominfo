@@ -20,12 +20,17 @@
             </div>
 
             <div class="row">
+                @if (session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    {{session('sukses')}}
+                </div>
+                @endif
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title" style="text-align: center">Masukkan Posting Blog</h4><br><br>
                             <div class="row">
-                                <div class="col-md-8">
+                                <div class="col-md-12">
                                     <form action="{{route('storePost')}}" method="POST" enctype="multipart/form-data">
                                         {{ csrf_field() }}
         
@@ -83,10 +88,10 @@
                                         </div>
                                         
                                         <div class="btn-group btn-group-example mb-3" role="group">
-                                            <button type="submit" class="btn btn-primary w-xs "><i class="mdi mdi-content-save">   Simpan</i></button>
+                                            <button type="submit" class="btn btn-primary w-xs ">Simpan</button>
                                             <button type="button" class="btn btn-danger w-xs">
                                                 <a href="{{route('posts')}}" style="color: white;text-align: center" >
-                                                    <i class="mdi mdi-close-circle">   Batal</i>
+                                                    Batal
                                                 </a>
                                             </button>
     

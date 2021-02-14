@@ -77,8 +77,9 @@
                             <a href="javascript: void(0);" class="has-arrow" key="t-vertical">Admin</a>
                             <ul class="sub-menu" aria-expanded="true">
                                 <li><a href="{{('dataAdmin')}}" key="t-light-sidebar">Data Admin</a></li>
-                                <li><a href="#" key="t-compact-sidebar">Posting</a></li>
-                                <li><a href="#" key="t-icon-sidebar">Icon Sidebar</a></li>
+                                <li><a href="{{route('posts')}}" key="t-compact-sidebar">Posting</a></li>
+                                <li><a href="{{route('createCategory')}}" key="t-icon-sidebar">Category</a></li>
+                                <li><a href="{{route('createTag')}}" key="t-icon-sidebar">Tag</a></li>
                             </ul>
                         </li>
 
@@ -91,6 +92,21 @@
                             </ul>
                         </li>
                     </ul>
+                </li>
+
+                <li class="menu-title" key="t-apps">Apps</li>
+
+                <li>
+                    <a href="calendar.html" class="waves-effect">
+                        <i class="bx bx-calendar"></i>
+                        <span key="t-calendar">Calendar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="chat.html" class="waves-effect">
+                        <i class="bx bx-chat"></i>
+                        <span key="t-chat">Chat</span>
+                    </a>
                 </li>
                 
                 @endif
