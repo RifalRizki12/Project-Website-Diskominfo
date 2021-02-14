@@ -11,14 +11,14 @@ class SiteController extends Controller
 {
     public function blog()
     {
-        $posts = Post::paginate(10);
+        $posts = Post::orderBy('created_at','desc')->paginate(10);;
         
         return view('vHomes.blog',compact(['posts']));
     }
 
     public function blogGird()
     {
-        $posts = Post::paginate(9);
+        $posts = Post::orderBy('created_at','desc')->paginate(9);;
         return view('vHomes.blogGird',compact(['posts']));
     }
 
