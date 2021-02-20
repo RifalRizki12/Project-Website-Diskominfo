@@ -1,215 +1,215 @@
-@extends('layouts.frontHomes.frontHome')
-@section('content')
+@extends('layouts.frontHomes.frontHomes')
+@section('title','Detail Informasi - Diskominfo')
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Sub Banner Start Here -->
-<div class="sub-banner text-center">
-    <div class="container">
-        <div class="sub-banner-caption th-bg">
-            <h2 class="title">Blog Detail</h2>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Blog Detail</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-</div>
-<!-- Sub Banner End Here -->
 
-<!-- Section Start -->
-<section class="pt-130 pb-130">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-12">
-                <!-- Blog Details Start Here -->
-                <div class="blog-detail">
-                    <figure class="blog-img">
-                        <img src="{{$post->thumbnail()}}" alt="blog">
-                    </figure>
-                    <div class="text">
-                        <ul class="blog-meta">
-                            <li><i class="fa fa-user th-cl"></i><a href="#">{{$post->user->name}}</a></li>
-                            <li><i class="fa fa-calendar th-cl"></i><a href="#">{{$post->created_at->diffForHumans()}}</a></li>
-                        </ul>
-                        <h4 class="title">{{$post->title}}</h4>
-                        <p>{!! $post->content !!}</p>
-                        <blockquote>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-                            <span>– Tom Pitarson</span></p>
-                        </blockquote>
-                        <h6 class="small-title">Why We Learn More And More</h6>
-                        <p class="mb-20">Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <figure class="mb-21"><img src="images/blog/blog-detail-1.jpg" alt=""></figure>
-                            </div>
-                            <div class="col-md-6">
-                                <figure class="mb-21"><img src="images/blog/blog-detail-2.jpg" alt=""></figure>
-                            </div>
-                        </div>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt </p>
-                    </div>
-                </div>
-                <!-- Blog Details End Here -->
-                <div class="post-share-tags">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="blog_tag_meta">
-                                <strong>Tags :</strong>
-                                @foreach ($post->tags as $tag)
-                                    <a href="#">{{$tag->name}}</a>  
-                                @endforeach
+<!-- Mirrored from slimhamdi.net/amira/demos/blog-post.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Feb 2021 18:29:05 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <title>Blog Post, Amira - Creative Multipurpose Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="social-meta">
-                                <li><strong>Share It : </strong></li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                            </ul>
-                        </div>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{asset('tHomes')}}/img/favicon.png">
+
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/skins/yellow.css" />
+
+    <!-- Live Style Switcher - demo only -->
+    <link rel="alternate stylesheet" type="text/css" title="blue" href="{{asset('tHomes')}}/css/skins/blue.css" />
+    <link rel="alternate stylesheet" type="text/css" title="blueviolet" href="{{asset('tHomes')}}/css/skins/blueviolet.css" />
+    <link rel="alternate stylesheet" type="text/css" title="goldenrod" href="{{asset('tHomes')}}/css/skins/goldenrod.css" />
+    <link rel="alternate stylesheet" type="text/css" title="green" href="{{asset('tHomes')}}/css/skins/green.css" />
+    <link rel="alternate stylesheet" type="text/css" title="magenta" href="{{asset('tHomes')}}/css/skins/magenta.css" />
+    <link rel="alternate stylesheet" type="text/css" title="orange" href="{{asset('tHomes')}}/css/skins/orange.css" />
+    <link rel="alternate stylesheet" type="text/css" title="purple" href="{{asset('tHomes')}}/css/skins/purple.css" />
+    <link rel="alternate stylesheet" type="text/css" title="red" href="{{asset('tHomes')}}/css/skins/red.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellow" href="{{asset('tHomes')}}/css/skins/yellow.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="{{asset('tHomes')}}/css/skins/yellowgreen.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/styleswitcher.css" />
+
+    <!-- Template JS Files -->
+    <script src="{{asset('tHomes')}}/js/modernizr.js"></script>
+
+</head>
+
+<body class="double-diagonal dark blog-page blog-post">
+
+    <div class="wrapper">
+        <!-- Banner Starts -->
+        <section class="banner banner-blog-post">
+            <div class="content text-center">
+                <div class="text-center top-text">
+                    <!-- Main Heading Starts -->
+                    <div class="text-center top-text">
+                        <h1>{{$post->title}}</h1>
+                    </div> 
+                    <!-- Main Heading Ends -->
+                    <hr>
+                    <!-- Meta Starts -->
+                    <div class="meta">
+                        <span><i class="fa fa-user"></i> <a href="#">{{$post->user->name}}</a></span>
+                        <span><i class="fa fa-calendar"></i> {{$post->created_at->format('d M Y')}}</span>
+                        <span><i class="fa fa-commenting"></i> <a href="#">29 comments</a></span>
+                        <span><i class="fa fa-tags"></i> 
+                            @foreach ($post->tags as $tag)
+                                <a href="#">{{$tag->name}}</a>  
+                            @endforeach</span>
+                        <span><i class="fa fa-link"></i> <a href="#">permalink</a></span>
                     </div>
+                    <!-- Meta Ends -->
                 </div>
-                <div class="admin-box mb-45">
-                    <figure>
-                        <img src="images/admin-img.jpg" class="img-fluid" alt="">
-                    </figure>
-                    <div class="text">
-                        <h4 class="title">David Maxxwell</h4>
-                        <p>Must explain to you how all this mistaken idea of pleasure and praising pain was born and I will give you complete account of the system, and expound the actual teachings of the great explorer of the truth the master-builder of human</p>
-                        <ul class="social-meta">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="related-post">
-                    <h6 class="small-title">Related News</h6>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <!--Event Thumb Strat-->
-                            <div class="event-thumb-2">
-                                <figure><img src="images/blog/blog-detail-3.jpg" alt=""></figure>
-                                <div class="text">
-                                    <h6 class="title"><a href="#">Mixing Tangible & Intangible Interfaces Using Adobe</a></h6>
-                                </div>
-                            </div>
-                            <!--Event Thumb End-->
-                        </div>
-                        <div class="col-md-6">
-                            <!--Event Thumb Strat-->
-                            <div class="event-thumb-2">
-                                <figure><img src="images/blog/blog-detail-4.jpg" alt=""></figure>
-                                <div class="text">
-                                    <h6 class="title"><a href="#">How To Convert An Infographic Gifogra Adobe Photoshop</a></h6>
-                                </div>
-                            </div>
-                            <!--Event Thumb End-->
-                        </div>
-                    </div>
-                </div>
-                <div class="media-list-wrap mb-45">
-                    <h6 class="small-title">Comments</h6>
-                    <div class="media">
-                        <img class="mr-3" src="images/media-img.jpg" alt="Generic placeholder image">
-                        <div class="media-body">
-                            <h5 class="mt-0">David Angel Makel</h5>
-                            <p class="designnation th-cl">Wed Designer</p>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page 
-                            when looking at its layout. The point of using Lorem Ipsum that  more-or-less normal distribution
-                            of letters, as opposed to using Content here, content</p>
-                            <a class="readmore-btn icon-btn" href="#">Reply Comments</a>
-                            <div class="media mt-40">
-                                <a class="pr-3" href="#">
-                                    <img src="images/media-img.jpg" alt="Generic placeholder image">
+            </div>
+        </section>
+        <!-- Banner Ends -->
+        
+        <!-- Section Content Starts -->
+        <section class="blog">
+            <div class="container">
+                <div class="row">
+                    <div class="content col-xs-12 col-md-8">
+                        <!-- Article Starts -->
+                        <article>
+                            <!-- Figure Starts -->
+                            <figure>
+                                <a href="#">
+                                    <img class="img-responsive" src="{{$post->thumbnail()}}" alt="">
                                 </a>
-                                <div class="media-body">
-                                    <h5 class="mt-0">Michel Rason Roy</h5>
-                                    <p class="designnation th-cl">Computer Engineer</p>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page 
-                                    when looking at its layout. The point of using Lorem Ipsum that  more-or-less normal distribution
-                                    of letters, as opposed to using Content here, content</p>
-                                    <a class="readmore-btn icon-btn" href="#">Reply Comments</a>
+                            </figure>
+                            <!-- Figure Ends -->
+                            <!-- Content Starts -->
+                            <p class="content-article">{!!$post->content!!}</p>
+                            <!-- Content Ends -->
+                            <!-- Meta Starts -->
+                            <div class="meta">
+                                <span><i class="fa fa-user"></i> <a href="#">{{$post->user->name}}</a></span>
+                                <span><i class="fa fa-calendar"></i>{{$post->created_at->format('d M Y')}}</span>
+                                <span><i class="fa fa-tags"></i> 
+                                    @foreach ($post->tags as $tag)
+                                    {{$tag->name}},
+                                    @endforeach
+                                </span>
+                                <span><i class="fa fa-link"></i> <a href="#">permalink</a></span>
+                            </div>
+                            <!-- Meta Ends -->
+                            <!-- Comments Starts -->
+                        <div class="comments">
+                            <h3 class="comments-heading uppercase">Komentar</h3>
+                            @foreach ($post->comments as $comment)
+                                <ul class="comments-list">
+                                    <li>
+                                        <!-- Comment Starts -->
+                                        <div class="comment">
+                                            <img class="comment-avatar pull-left" alt="" src="{{asset('tHomes')}}/img/blog/user1.jpg">
+                                            <div class="comment-body">
+                                                <div class="meta-data">
+                                                    <span class="comment-author">{{$comment->user->name}}</span>
+                                                    <span class="comment-date pull-right second-font">{{$comment->created_at->diffForHumans()}}</span>
+                                                </div>
+                                                <p class="comment-content">
+                                                {!!$comment->comment!!}</p>
+                                                <div>
+                                                    <a class="comment-reply" href="#">Reply</a>
+                                                </div>	
+                                            </div>
+                                        </div>
+                                        <!-- Comment Ends -->
+                                        {{-- <ul class="comments-reply">
+                                            <li>
+                                                <!-- Comment Starts -->
+                                                <div class="comment">
+                                                    <img class="comment-avatar pull-left" alt="" src="{{asset('tHomes')}}/img/blog/user2.jpg">
+                                                    <div class="comment-body">
+                                                        <div class="meta-data">
+                                                            <span class="comment-author">Rawia Chniti</span>
+                                                            <span class="comment-date pull-right">March 29, 2017</span>
+                                                        </div>
+                                                        <p class="comment-content">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehen.</p>
+                                                        <div>
+                                                            <a class="comment-reply" href="#">Reply</a>
+                                                        </div>	
+                                                    </div>
+                                                </div>
+                                                <!-- Comment Ends -->
+                                            </li>
+                                        </ul> --}}
+                                        
+                                    </li>
+                                </ul> 
+                            @endforeach
+                            
+                            @guest
+                            <h3 class="comments-heading add-comment"><a href="{{route('login')}}"> Login Terlebih dahulu</a></h3>
+                            @else
+                            <h3 class="comments-heading add-comment">Tambah Komentar</h3>
+                                <!-- Comments Form Starts -->
+                                <div class="custom-form comments-form">
+                                    <form action="{{route('buatKomentar',$post->id)}}" method="POST">
+                                        {{ csrf_field() }}
+                                        
+                                        <div class="form-group">
+                                            <textarea type="text" class="form-control" id="comment" name="comment" placeholder="COMMENT"  required></textarea>
+                                        </div>
+                                        <!-- Input Field Ends -->
+                                        <!-- Submit Form Button Starts -->
+                                        <div class="form-group">
+                                            <button class="custom-button" type="submit">submit comment</button>
+                                        </div>
+                                        <!-- Submit Form Button Ends -->
+                                    </form>
                                 </div>
-                            </div>
+                                <!-- Comments Form Ends -->
+                            @endguest
                         </div>
+                        </article>
+                        <!-- Article Ends -->
                     </div>
-                </div>
-                <div class="comment-form media-list-wrap">
-                    <h6 class="small-title">Reply Comments</h6>
-                    <form class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="name" placeholder="Full Name Here">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="email" placeholder="Email Here">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <textarea class="form-control" placeholder="Massage"></textarea>
-                            </div>
-                            <div class="form-group m-0 text-left">
-                                <button class="btn th-bg icon-btn" type="submit">Send message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="sidebar-widgets sidebar-widgets-style-1">
-                    <div class="single-widget widget_search">
-                        <form role="search" method="post" id="searchForm" class="search-form"  action="http://oscarthemes.com/html/edukul/education/page-search-results.html" method="get">
-                            <div class="from-grupe">
-                                <input type="text" placeholder="Search your keyword..." name="q" id="q" class="search-field">
-                                <button class="th-cl" type="submit" ><i class="fa fa-search"></i></button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="single-widget categories_widget">
-                        <div class="widget-title">
-                            <h2><span>Categories</span></h2>
-                        </div>
-                        <div class="categories-list ">
-                            <ul>
-                                @foreach ($posts as $post)
-                                <li><a href="#">{{$post->name}}</a></li>
-                                    
-                                @endforeach
+                    <!-- Sidebar Starts -->
+                    <div class="sidebar col-xs-12 col-md-4">
+                        <!-- Categories Widget Starts -->
+                        <div class="widget">
+                            <h3 class="widget-title">Categories</h3>
+                            <ul class="nav nav-tabs">
+                                @foreach ($category as $category)
+									<li><a href="{{route('categoryShow',[$category->id])}}">{{$category->name}} ({{$category->posts()->count()}})</a></li>
+								@endforeach
                             </ul>
                         </div>
-                    </div>
-
-                    <div class="single-widget tags_widget">
-                        <div class="widget-title">
-                            <h2><span>Tag</span></h2>
-                        </div>
-                        <div class="tags-list ">
-                            <ul>
-                                <li><a href="#">Cleaning</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Car</a></li>
-                                <li><a href="#">House</a></li>
-                                <li><a href="#">Washing </a></li>
-                                <li><a href="#">Agency </a></li>
+                        <!-- Categories Widget Ends -->
+                    
+                        <!-- Tags Widget Starts -->
+                        <div class="widget widget-tags">
+                            <h3 class="widget-title">Popular Tags </h3>
+                            <ul class="unstyled clearfix">
+                                @foreach ($tags as $tag)
+									<li><a href="{{route('tagShow',[$tag->id])}}">{{$tag->name}} ({{$tag->posts()->count()}})</a></li>	
+								@endforeach
                             </ul>
                         </div>
+                        <!-- Tags Widget Ends -->
                     </div>
+                    <!-- Sidebar Ends -->
                 </div>
             </div>
-        </div>
+        </section>
     </div>
-</section>
-<!-- Section End -->
 
-@endsection
+    <!-- Template JS Files -->
+    <script src="{{asset('tHomes')}}/js/jquery-2.2.4.min.js"></script>
+    <script src="{{asset('tHomes')}}/js/plugins/jquery.easing.1.3.js"></script>
+    <script src="{{asset('tHomes')}}/js/plugins/bootstrap.min.js"></script>
+
+    <!-- Live Style Switcher JS File - only demo -->
+    <script src="{{asset('tHomes')}}/js/styleswitcher.js"></script>
+
+    <!-- Main JS Initialization File -->
+    <script src="{{asset('tHomes')}}/js/custom.js"></script>
+
+</body>
+
+</html>

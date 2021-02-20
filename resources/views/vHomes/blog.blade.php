@@ -1,176 +1,170 @@
-@extends('layouts.frontHomes.frontHome')
-@section('content')
+@extends('layouts.frontHomes.frontHomes')
+@section('title','Informasi List')
+<!DOCTYPE html>
+<html lang="en">
 
-	<!-- Sub Banner Start Here -->
-	<div class="sub-banner text-center">
-		<div class="container">
-			<div class="sub-banner-caption th-bg">
-				<h2 class="title">Blog Full</h2>
-				<nav aria-label="breadcrumb">
-				  <ol class="breadcrumb">
-				    <li class="breadcrumb-item"><a href="#">Home</a></li>
-				    <li class="breadcrumb-item active" aria-current="page">Blog Full</li>
-				  </ol>
-				</nav>
+
+<!-- Mirrored from slimhamdi.net/amira/demos/blog-right-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Feb 2021 18:28:34 GMT -->
+<head>
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{asset('tHomes')}}/img/favicon.png">
+
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/skins/yellow.css" />
+
+    <!-- Live Style Switcher - demo only -->
+    <link rel="alternate stylesheet" type="text/css" title="blue" href="{{asset('tHomes')}}/css/skins/blue.css" />
+    <link rel="alternate stylesheet" type="text/css" title="blueviolet" href="{{asset('tHomes')}}/css/skins/blueviolet.css" />
+    <link rel="alternate stylesheet" type="text/css" title="goldenrod" href="{{asset('tHomes')}}/css/skins/goldenrod.css" />
+    <link rel="alternate stylesheet" type="text/css" title="green" href="{{asset('tHomes')}}/css/skins/green.css" />
+    <link rel="alternate stylesheet" type="text/css" title="magenta" href="{{asset('tHomes')}}/css/skins/magenta.css" />
+    <link rel="alternate stylesheet" type="text/css" title="orange" href="{{asset('tHomes')}}/css/skins/orange.css" />
+    <link rel="alternate stylesheet" type="text/css" title="purple" href="{{asset('tHomes')}}/css/skins/purple.css" />
+    <link rel="alternate stylesheet" type="text/css" title="red" href="{{asset('tHomes')}}/css/skins/red.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellow" href="{{asset('tHomes')}}/css/skins/yellow.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="{{asset('tHomes')}}/css/skins/yellowgreen.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/styleswitcher.css" />
+
+    <!-- Template JS Files -->
+    <script src="{{asset('tHomes')}}/js/modernizr.js"></script>
+
+</head>
+
+<body class="double-diagonal dark blog-page">
+
+    <!-- Page Wrapper Starts -->
+    <div class="wrapper">
+
+        <!-- Banner Starts -->
+        <section class="banner">
+			<div class="content text-center">
+				<div class="text-center top-text">
+                    <!-- Main Heading Starts -->
+					<div class="text-center top-text">
+						<h1>Informasi posts</h1>
+					</div> 
+					<!-- Main Heading Ends -->
+					<hr>
+                    <!-- Breadcrumb Starts -->
+					<ul class="breadcrumb">
+						<li><a href="{{route('/')}}"> home</a></li>
+						<li>Informasi</li>
+					</ul>
+					<!-- Breadcrumb Ends -->
+                </div>
 			</div>
-		</div>
-	</div>
-	<!-- Sub Banner End Here -->
+		</section>
+		<!-- Banner Ends -->
+        <!-- Section Content Starts -->
+        <section class="blog">
+			<div class="container">
+				<div class="row">
+					<div class="content col-xs-12 col-md-8">
+            @foreach ($posts as $post)
+              @if ($post->status == "aktif")
+                <!-- Article Starts -->
+                <article>
+                  <a href="{{route('site.single.post',$post->slug)}}"><h4>{{$post->title}}</h4></a>
+                  <!-- Figure Starts -->
+                  <figure>
+                      <a href="{{route('site.single.post',$post->slug)}}">
+                          <img class="img-responsive" src="{{$post->thumbnail()}}" alt="">
+                      </a>
+                  </figure>
+                  <!-- Figure Ends -->
+                  <!-- Excerpt Starts -->
+                  <p class="excerpt-blog">{!!str_limit($post->content, 300)!!}</p>
+                  <!-- Excerpt Ends -->
+                  <a class="custom-button" href="{{route('site.single.post',$post->slug)}}">Read more</a>
+                  <!-- Meta Starts -->
+                  <div class="meta">
+                      <span><i class="fa fa-user"></i> <a href="#">{{$post->user->name}}</a></span>
+                      <span><i class="fa fa-calendar"></i>{{$post->created_at->format('d M Y')}}</span>
+                      <span><i class="fa fa-tags"></i>
+                    @foreach ($post->tags as $tag)
+                      {{$tag->name}},
+                    @endforeach
+                    </span>
+                      
+                  </div>
+                  <!-- Meta Ends -->
+                </article>
+                <!-- Article Ends -->    
+              @endif
+            @endforeach
 
-<!-- Section Start -->
-<section class="pt-130 pb-130 section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-lg-8">
-                @foreach ($posts as $post)
-                <!-- Blog Thumb Start Here -->
-                <div class="blog-thumb blog-thumb-full">
-                    <figure class="blog-img">
-                        <img src="{{$post->thumbnail()}}" alt="blog">
-                    </figure>
-                    <div class="text">
-                        <ul class="blog-meta">
-                            <li><i class="fa fa-user th-cl"></i><a href="#">{{$post->user->name}}</a></li>
-                            <li><i class="fa fa-calendar th-cl"></i><a href="#">{{$post->created_at->format('d M Y')}}</a></li>
-                            <li><i class="fa fa-comments-o th-cl"></i><a href="#">Comments (10)</a></li>
-                        </ul>
-                        <h4 class="title"><a href="{{route('site.single.post',$post->slug)}}">{!!str_limit($post->title,30)!!}</a></h4>
-                        <p>{!! str_limit($post->content,300)!!}</p>
-                        <a class="btn th-bg icon-btn" href="{{route('site.single.post',$post->slug)}}">Learn more</a>
-                    </div>
-                </div>
-                <!-- Blog Thumb End Here -->
-                    
-                @endforeach
+						<nav class="col-xs-12 text-center" aria-label="Page navigation">
+						  <ul class="pagination">
+							<li>
+							  <a href="#" aria-label="Previous">
+								<span aria-hidden="true"><i class="fa fa-angle-double-left"></i></span>
+							  </a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li class="active"><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li>
+							  <a href="#" aria-label="Next">
+								<span aria-hidden="true"><i class="fa fa-angle-double-right"></i></span>
+							  </a>
+							</li>
+						  </ul>
+						</nav>
+					</div>
+					<!-- Sidebar Starts -->
+					<div class="sidebar col-xs-12 col-md-4">
+						<!-- Categories Widget Starts -->
+						<div class="widget">
+							<h3 class="widget-title">Categories</h3>
+							<ul class="nav nav-tabs">
+								@foreach ($category as $category)
+									<li><a href="{{route('categoryShow',[$category->id])}}">{{$category->name}} ({{$category->posts()->count()}})</a></li>
+								@endforeach
+							</ul>
+						</div>
+						<!-- Categories Widget Ends -->
+						
+						<!-- Tags Widget Starts -->
+						<div class="widget widget-tags">
+							<h3 class="widget-title"> Tags </h3>
+							<ul class="unstyled clearfix">
+								@foreach ($tags as $tag)
+									<li><a href="{{route('tagShow',[$tag->id])}}">{{$tag->name}} ({{$tag->posts()->count()}})</a></li>	
+								@endforeach
+							</ul>
+						</div>
+						<!-- Tags Widget Ends -->
+					</div>
+					<!-- Sidebar Ends -->
+				</div>
+			</div>
+		</section>
+		<!-- Section Content Ends -->
 
-                <!-- Pagination Start Here -->
-                {{ $posts->links() }}
-                
-                {{-- <div class="pagination-area float-left w-100 mt-40  mb-md-5 text-center">
-                    <ul>
-                        <li>{{ $posts->links() }}</li>
-                        
-                    </ul>
-                </div> --}}
-                <!-- Pagination End Here -->
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="sidebar-widgets sidebar-widgets-style-1">
-                    <div class="single-widget widget_search">
-                        <form role="search" method="post" id="searchForm" class="search-form"  action="http://oscarthemes.com/html/edukul/education/page-search-results.html" method="get">
-                            <div class="from-grupe">
-                                <input type="text" placeholder="Search your keyword..." name="q" id="q" class="search-field">
-                                <button class="th-cl" type="submit" ><i class="fa fa-search"></i></button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="single-widget categories_widget">
-                        <div class="widget-title">
-                            <h2><span>Categories</span></h2>
-                        </div>
-                        <div class="categories-list ">
-                            <ul>
-                                <li><a href="#">Accessories</a></li>
-                                <li><a href="#">Clothing</a></li>
-                                <li><a href="#">Decor</a></li>
-                                <li><a href="#">Hoodies</a></li>
-                                <li><a href="#">Music </a></li>
-                                <li><a href="#">Tshirts </a></li>
-                                <li><a href="#">Uncategorized </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="single-widget recentpost_widget">
-                        <div class="widget-title">
-                            <h2><span>Feeds</span></h2>
-                        </div>
-                        <div class="recentpost-list ">
-                            <div class="single-post">
-                                <div class="media">
-                                    <div class="post-img mr-3">
-                                        <a href="#"><img src="images/blog/r1.png" alt="recent post"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="mt-0"><a href="#">Alonso Kelina Falao Asiano Pero</a></h4>
-                                        <div class="time">
-                                            <p><i class="fa fa-clock-o"></i> <span>3 Hours ago </span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-post">
-                                <div class="media">
-                                    <div class="post-img mr-3">
-                                        <a href="#"><img src="images/blog/r2.png" alt="recent post"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="mt-0"><a href="#">It is a long established fact that a reader</a></h4>
-                                        <div class="time">
-                                            <p><i class="fa fa-clock-o"></i> <span>4 Hours ago </span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-post">
-                                <div class="media">
-                                    <div class="post-img mr-3">
-                                        <a href="#"><img src="images/blog/r3.png" alt="recent post"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="mt-0"><a href="#">Many desktop publish packages and web</a></h4>
-                                        <div class="time">
-                                            <p><i class="fa fa-clock-o"></i> <span>5 Hours ago </span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-post">
-                                <div class="media">
-                                    <div class="post-img mr-3">
-                                        <a href="#"><img src="images/blog/r4.png" alt="recent post"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="mt-0"><a href="#">Various versions have evolved over the years</a></h4>
-                                        <div class="time">
-                                            <p><i class="fa fa-clock-o"></i> <span>6 Hours ago </span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-post">
-                                <div class="media">
-                                    <div class="post-img mr-3">
-                                        <a href="#"><img src="images/blog/r5.png" alt="recent post"></a>
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="mt-0"><a href="#">Photo booth anim 8-bit PBR 3 wolf moon.</a></h4>
-                                        <div class="time">
-                                            <p><i class="fa fa-clock-o"></i> <span>7 Hours ago </span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-widget tags_widget">
-                        <div class="widget-title">
-                            <h2><span>Populer Tag</span></h2>
-                        </div>
-                        <div class="tags-list ">
-                            <ul>
-                                <li><a href="#">Cleaning</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Car</a></li>
-                                <li><a href="#">House</a></li>
-                                <li><a href="#">Washing </a></li>
-                                <li><a href="#">Agency </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</section>
-<!-- Section End -->
-@endsection
+    <!-- Wrapper Ends -->
+
+    <!-- Template JS Files -->
+    <script src="{{asset('tHomes')}}/js/jquery-2.2.4.min.js"></script>
+    <script src="{{asset('tHomes')}}/js/plugins/jquery.easing.1.3.js"></script>
+    <script src="{{asset('tHomes')}}/js/plugins/bootstrap.min.js"></script>
+
+    <!-- Live Style Switcher JS File - only demo -->
+    <script src="{{asset('tHomes')}}/js/styleswitcher.js"></script>
+
+    <!-- Main JS Initialization File -->
+    <script src="{{asset('tHomes')}}/js/custom.js"></script>
+
+</body>
+
+
+<!-- Mirrored from slimhamdi.net/amira/demos/blog-right-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Feb 2021 18:28:54 GMT -->
+</html>

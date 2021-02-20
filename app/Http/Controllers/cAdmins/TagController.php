@@ -5,6 +5,8 @@ namespace App\Http\Controllers\cAdmins;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Tag;
+use App\Models\Category;
+use App\Models\Post;
 
 class TagController extends Controller
 {
@@ -53,7 +55,11 @@ class TagController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = Category::all();
+        $tags = Tag::paginate(4);
+        $tags2 = Tag::find($id);
+        $posts = Post::all();
+        return view('vHomes.tagShow',compact(['tags','tags2','posts','category']));
     }
 
     /**

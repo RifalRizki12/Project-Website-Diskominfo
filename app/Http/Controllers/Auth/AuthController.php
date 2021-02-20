@@ -21,7 +21,7 @@ class AuthController extends Controller
             alert()->success('Kamu Berhasil Masuk :)', 'Welcome :)');
             return redirect('/check');
         }
-        alert()->error('Email dan password salah', 'ERROR');
+        
         return redirect('/login');
     }
 
@@ -33,6 +33,7 @@ class AuthController extends Controller
     public function postregister(Request $request)
     {
         $this->validate($request,[
+            'nama_depan' => 'required|min:2',
             'email' => 'required|email|unique:users',
         ]);
 
@@ -45,7 +46,7 @@ class AuthController extends Controller
         $user->remember_token = str_random(60);
         $user->save();
 
-        //insert ke tabel siswa
+        //insert ke tabel data diri
         $request->request->add(['user_id' => $user->id ]);
         $datadiri = \App\Models\DataDiri::create($request->all());
         if($request->hasFile('avatar')){

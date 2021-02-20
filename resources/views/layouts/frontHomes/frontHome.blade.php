@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="HTML, IconiqThemes Themeforest, Best Theme ">
     <!-- title here -->
-    <title>Diskominfo - Informasi</title>
+	<title>@yield('title')</title>
+    {{-- <title>Diskominfo - Informasi</title> --}}
     <!-- Favicon and Touch Icons -->
     <link rel="shortcut icon" href="{{asset('tHome')}}/images/fav.png">
     <!-- Place favicon.ico in the root directory -->

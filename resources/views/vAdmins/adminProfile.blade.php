@@ -1,4 +1,5 @@
 @extends('layouts.frontAdmins.frontAdmin')
+@section('title','Profile - Diskominfo')
 @section('content')
 
 <div class="main-content">
@@ -63,9 +64,12 @@
                                                 <p class="text-muted mb-0">Revenue</p>
                                             </div>
                                         </div>
-                                        <div class="mt-4">
-                                            <a href="{{route('editAdmin',[$data->id])}}" class="btn btn-primary waves-effect waves-light btn-sm">Edit Profile <i class="mdi mdi-arrow-right ml-1"></i></a>
-                                        </div>
+                                        @if (auth()->user()->id == auth()->user()->datadiri->user_id)
+                                            
+                                            <div class="mt-4">
+                                                <a href="{{route('editAdmin',[$data->id])}}" class="btn btn-primary waves-effect waves-light btn-sm">Edit Profile <i class="mdi mdi-arrow-right ml-1"></i></a>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

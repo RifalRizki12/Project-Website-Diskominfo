@@ -18,10 +18,10 @@ class CreateDatadiriTable extends Migration
             $table->bigInteger('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')
             ->onUpdate('cascade');
-            $table->string('nama_depan');
+            $table->string('nama_depan')->nullable();
             $table->string('nama_belakang')->nullable();
             $table->string('tanggal_lahir')->nullable();
-            $table->string('jenis_kelamin');
+            $table->string('jenis_kelamin')->nullable();
             $table->string('agama')->nullable();
             $table->string('nohp')->nullable();
             $table->string('avatar')->nullable();

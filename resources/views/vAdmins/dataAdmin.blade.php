@@ -1,4 +1,5 @@
 @extends('layouts.frontAdmins.frontAdmin')
+@section('title','Data Admin - Diskominfo')
 @section('content')
 
 <div class="main-content">
@@ -28,12 +29,13 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-
-                            <div>
-                                <button type="button" class="btn btn-primary btn-sm waves-effect waves-light" data-toggle="modal" data-target="#exampleModal">
-                                    <i class="bx bx-smile font-size-16 align-middle mr-2"></i> Tambah
-                                </button>
-                            </div><br>
+                            @if (auth()->user()->role == "admin utama")
+                                <div>
+                                    <button type="button" class="btn btn-primary btn-sm waves-effect waves-light" data-toggle="modal" data-target="#exampleModal">
+                                        <i class="bx bx-smile font-size-16 align-middle mr-2"></i> Tambah
+                                    </button>
+                                </div><br>
+                            @endif
 
                             <table id="datatable-buttons" class="table table-hover table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
@@ -42,7 +44,9 @@
                                     <th>J.Kelamin</th>
                                     <th>Agama</th>
                                     <th>No Hp</th>
-                                    <th>Aksi</th>
+                                    @if (auth()->user()->role == "admin utama")
+                                        <th>Aksi</th>
+                                    @endif
                                 </tr>
                                 </thead>
 
@@ -55,20 +59,22 @@
                                     <td>{{$data->jenis_kelamin}}</td>
                                     <td>{{$data->agama}}</td>
                                     <td>{{$data->nohp}}</td>
-                                    <td style="text-align: center">
-                                        <div class="btn-group btn-group-example" role="group">
-                                            <button type="button" class="btn btn-primary btn-sm w-xs">
-                                                <a href="{{route('editAdmin',[$data->id])}}" style="color: white">
-                                                    <i class="mdi mdi-account-edit"> Edit</i>
-                                                </a>
-                                            </button>
-                                            <button type="button" class="btn btn-danger btn-sm w-xs">
-                                                <a style="color: white" href="{{route('deleteAdmin',[$data->id])}}" onclick="return confirm('Yakin')">
-                                                    <i class="mdi mdi-account-remove"> Hapus</i>
-                                                </a>
-                                            </button>
-                                        </div>
-                                    </td>
+                                    @if (auth()->user()->role == "admin utama")
+                                        <td style="text-align: center">
+                                            <div class="btn-group btn-group-example" role="group">
+                                                <button type="button" class="btn btn-primary btn-sm w-xs">
+                                                    <a href="{{route('editAdmin',[$data->id])}}" style="color: white">
+                                                        <i class="mdi mdi-account-edit"> Edit</i>
+                                                    </a>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm w-xs">
+                                                    <a style="color: white" href="{{route('deleteAdmin',[$data->id])}}" onclick="return confirm('Yakin')">
+                                                        <i class="mdi mdi-account-remove"> Hapus</i>
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </td>   
+                                    @endif
                                     </tr>
                                 @endif
                                 @endforeach

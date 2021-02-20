@@ -15,7 +15,6 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        // $posts = Auth::user()->posts();
         return view('vAdmins.vPosts.index',compact(['posts']));
     }
 
@@ -35,6 +34,7 @@ class PostController extends Controller
         ]);
         
         $post = new Post;
+        $post->status = 'aktif';
         $post->title = $request->title;
         $post->slug = str_slug($post->title);
         $post->content = $request->content;
@@ -81,15 +81,16 @@ class PostController extends Controller
         }
         $post->save();
         $post->tags()->sync($request->tags);
-        return redirect('posts')->with('sukses','Post Baru Berhasil Di Edit');
+        return redirect('posts')->with('delete','Post Baru Berhasil Di Edit');
     }
 
     public function delete($id)
     {
         $data = Post::where('id',$id)->first();
-
+        Storage::delete($data->thumbnail);
+        $data->tags()->detach();
         $data->delete();
-        return redirect()->back();
+        return redirect()->back()->with('sukses','Postingan Berhasil Dihapus');
     }
 
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\cAdmins;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\DataDiri;
+use App\Models\Post;
 use Auth;
 
 class DataAdminController extends Controller
@@ -54,7 +55,7 @@ class DataAdminController extends Controller
     public function edit($id)
     {
         $admin = \App\Models\DataDiri::find($id);
-        return view('vAdmins.editAdmin',['admin'=>$admin]);
+        return view('vAdmins.editAdmin',compact(['admin']));
     }
 
     public function update(Request $request,$id)
@@ -84,6 +85,7 @@ class DataAdminController extends Controller
     {
         $data = DataDiri::where('id',$id)->first();
         $user = \App\User::find($data->user_id);
+        Storage::delete($data->thumbnail);
 
         $data->delete();
         $user->delete();
@@ -92,7 +94,8 @@ class DataAdminController extends Controller
 
     public function profileSaya()
     {
-        return view('vAdmins.profile');
+        $posts = Post::all();
+        return view('vAdmins.profile',compact('posts'));
     }
 
     public function profile($id)

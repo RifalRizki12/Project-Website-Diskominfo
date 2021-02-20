@@ -1,149 +1,181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
-    
-<!-- Mirrored from themesbrand.com/skote-mvc/layouts/auth-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Jan 2021 08:43:28 GMT -->
+
+<!-- Mirrored from slimhamdi.net/amira/demos/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Feb 2021 18:29:10 GMT -->
 <head>
-        
-        <meta charset="utf-8" />
-        <title>Register | Skote - Responsive Bootstrap 4 Admin Dashboard</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-        <meta content="Themesbrand" name="author" />
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('tAdmin')}}/assets/images/favicon.ico">
+    <meta charset="utf-8" />
+    <title>Register, Diskominfo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Bootstrap Css -->
-        <link href="{{asset('tAdmin')}}/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
-        <!-- Icons Css -->
-        <link href="{{asset('tAdmin')}}/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <!-- App Css-->
-        <link href="{{asset('tAdmin')}}/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{asset('tHomes')}}/img/favicon.png">
 
-    </head>
+    <!-- Template CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/skins/yellow.css" />
 
-    <body>
-        
-        <div class="account-pages my-5 pt-sm-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-6 col-xl-5">
-                        <div class="card overflow-hidden">
-                            <div class="bg-soft-primary">
-                                <div class="row">
-                                    <div class="col-7">
-                                        <div class="text-primary p-4">
-                                            <h5 class="text-primary">Free Register</h5>
-                                            <p>Get your free Skote account now.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-5 align-self-end">
-                                        <img src="{{asset('tAdmin')}}/assets/images/profile-img.png" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body pt-0"> 
-                                <div>
-                                    <a href="{{route('/')}}">
-                                        <div class="avatar-md profile-user-wid mb-4">
-                                            <span class="avatar-title rounded-circle bg-light">
-                                                <img src="{{asset('tAdmin')}}/assets/images/home.png" alt="" class="rounded-circle" height="30">
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="p-2">
-                                    <form class="form-horizontal" action="{{route('postregister')}}" method="POST" enctype="multipart/form-data">
-                                        @csrf
+    <!-- Live Style Switcher - demo only -->
+    <link rel="alternate stylesheet" type="text/css" title="blue" href="{{asset('tHomes')}}/css/skins/blue.css" />
+    <link rel="alternate stylesheet" type="text/css" title="blueviolet" href="{{asset('tHomes')}}/css/skins/blueviolet.css" />
+    <link rel="alternate stylesheet" type="text/css" title="goldenrod" href="{{asset('tHomes')}}/css/skins/goldenrod.css" />
+    <link rel="alternate stylesheet" type="text/css" title="green" href="{{asset('tHomes')}}/css/skins/green.css" />
+    <link rel="alternate stylesheet" type="text/css" title="magenta" href="{{asset('tHomes')}}/css/skins/magenta.css" />
+    <link rel="alternate stylesheet" type="text/css" title="orange" href="{{asset('tHomes')}}/css/skins/orange.css" />
+    <link rel="alternate stylesheet" type="text/css" title="purple" href="{{asset('tHomes')}}/css/skins/purple.css" />
+    <link rel="alternate stylesheet" type="text/css" title="red" href="{{asset('tHomes')}}/css/skins/red.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellow" href="{{asset('tHomes')}}/css/skins/yellow.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="{{asset('tHomes')}}/css/skins/yellowgreen.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/styleswitcher.css" />
 
-                                        <div class="form-group">
-                                            <label for="namadepan">Nama Depan</label>
-                                            <input name="nama_depan" type="nama_depan" class="form-control" id="namadepan" placeholder="Nama Depan">        
-                                        </div>
+    <!-- Template JS Files -->
+    <script src="{{asset('tHomes')}}/js/modernizr.js"></script>
 
-                                        <div class="form-group">
-                                            <label for="namabelakang">Nama Belakang</label>
-                                            <input name="nama_belakang" type="nama_belakang" class="form-control" id="namabelakang" placeholder="Nama belakang">        
-                                        </div>
+</head>
 
-                                        <div class="form-group" >
-                                            <label for="exampleFormControlSelect1">Jenis Kelamin</label>
-                                            <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
-                                              <option value="Laki-Laki"{{(old('jenis_kelamin') == 'Laki-Laki') ? ' selected' : ''}}>Laki-Laki</option>
-                                              <option value="Perempuan"{{(old('jenis_kelamin') == 'Perempuan') ? ' selected' : ''}}>Perempuan</option>
-                                            </select>
-                                      </div>
-
-                                        <div class="form-group">
-                                            <label for="useremail">Email</label>
-                                            <input name="email" type="email" class="form-control" id="useremail" placeholder="Enter email">     
-                                            @if($errors->has('email'))
-                                                <span class="help-block">{{$errors->first('email')}}</span>
-                                            @endif
-                                        </div>
-                
-                                        <div class="form-group">
-                                            <label for="userpassword">Password</label>
-                                            <input name="password" type="password" class="form-control" id="userpassword" placeholder="Enter password">        
-                                        </div>
-                    
-                                        <div class="mt-4">
-                                            <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Register</button>
-                                        </div>
-
-                                        <div class="mt-4 text-center">
-                                            <h5 class="font-size-14 mb-3">Sign up using</h5>
-            
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item">
-                                                    <a href="javascript::void()" class="social-list-item bg-primary text-white border-primary">
-                                                        <i class="mdi mdi-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="javascript::void()" class="social-list-item bg-info text-white border-info">
-                                                        <i class="mdi mdi-twitter"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="javascript::void()" class="social-list-item bg-danger text-white border-danger">
-                                                        <i class="mdi mdi-google"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                
-                                        <div class="mt-4 text-center">
-                                            <p class="mb-0">By registering you agree to the Skote <a href="#" class="text-primary">Terms of Use</a></p>
-                                        </div>
-                                    </form>
-                                </div>
-            
-                            </div>
-                        </div>
-                        <div class="mt-5 text-center">
-                            
-                            <div>
-                                <p>Already have an account ? <a href="{{route('login')}}" class="font-weight-medium text-primary"> Login</a> </p>
-                                <p>© 2020 Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by Mohammad Rizki A</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+<body class="double-diagonal dark auth-page">
+    <!-- Preloader Starts -->
+    <div class="preloader" id="preloader">
+        <div class="logopreloader">
+            <img src="{{asset('tHomes')}}/img/styleswitcher/logos/yellow.png" alt="logo-black">
         </div>
+        <div class="loader" id="loader"></div>
+    </div>
+    <!-- Preloader Ends -->
+    
+    <!-- Page Wrapper Starts -->
+    <div class="wrapper">
+        <div class="container-fluid user-auth">
+			<div class="hidden-xs col-sm-4 col-md-4 col-lg-4">
+				<!-- Logo Starts -->
+				<a class="logo" href="{{route('/')}}">
+					<img id="single-logo" class="img-responsive" src="{{asset('tHomes')}}/img/styleswitcher/logos/yellow.png" alt="logo">
+				</a>
+				<!-- Logo Ends -->
+				<!-- Slider Starts -->
+				<div id="carousel-testimonials" class="carousel slide carousel-fade" data-ride="carousel">
+					<!-- Indicators Starts -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-testimonials" data-slide-to="1"></li>
+						<li data-target="#carousel-testimonials" data-slide-to="2"></li>
+					</ol>
+					<!-- Indicators Ends -->
+					<!-- Carousel Inner Starts -->
+					<div class="carousel-inner">
+						<!-- Carousel Item Starts -->
+						<div class="item active item-1">
+							<div>
+								<blockquote>
+									<p>Amira's Team Was Great To Work With And Interpreted Our Needs Perfectly.</p>
+									<footer><span>Lucy Smith</span>, England</footer>
+								</blockquote>
+							</div>
+						</div>
+						<!-- Carousel Item Ends -->
+						<!-- Carousel Item Starts -->
+						<div class="item item-2">
+							<div>
+								<blockquote>
+									<p>The Team Is Endlessly Helpful, Flexible And Always Quick To Respond, Thanks Amira!</p>
+									<footer><span>Rawia Chniti</span>, Russia</footer>
+								</blockquote>
+							</div>
+						</div>
+						<!-- Carousel Item Ends -->
+						<!-- Carousel Item Starts -->
+						<div class="item item-3">
+							<div>
+								<blockquote>
+									<p>We Are So Appreciative Of Their Creative Efforts, And Love Our New Site!, millions of thanks Amira!</p>
+									<footer><span>Mario Verratti</span>, Spain</footer>
+								</blockquote>
+							</div>
+						</div>
+						<!-- Carousel Item Ends -->
+					</div>
+					<!-- Carousel Inner Ends -->
+				</div>
+				<!-- Slider Ends -->
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+				<!-- Logo Starts -->
+				<a class="visible-xs" href="{{route('/')}}">
+					<img id="logo-mobile-light" class="img-responsive mobile-logo white-l" src="{{asset('tHomes')}}/img/styleswitcher/logos/yellow.png" alt="logo">
+					<img id="logo-mobile-dark" class="img-responsive mobile-logo dark-l" src="{{asset('tHomes')}}/img/styleswitcher/logos/logos-dark/yellow.png" alt="logo">
+				</a>
+				<!-- Logo Ends -->
+				<div class="form-container">
+					<div>
+						<!-- Main Heading Starts -->
+					<div class="text-center top-text">
+						<h1><span>get</span> started</h1>
+						<p>open account absolutely free</p>
+					</div>
+					<!-- Main Heading Ends -->
+						<!-- Form Starts -->
+                        <form class="custom-form" action="{{route('postregister')}}" method="POST" enctype="multipart/form-data">
+                            {{ csrf_field() }}
+							<!-- Input Field Starts -->
+							<div class="form-group{{$errors->has('nama_depan') ? ' has-error' : ''}}">
+                                <input class="form-control" name="nama_depan" id="nama_depan" placeholder="Nama Depan" type="text" required>
+                                @if($errors->has('nama_depan'))
+                                    <span class="help-block">{{$errors->first('nama_depan')}}</span>
+                                @endif
+							</div>
+                            <!-- Input Field Ends -->
+                            <div class="form-group">
+								<input class="form-control" name="nama_belakang" id="nama_belakang" placeholder="Nama belakang" type="text" >
+                            </div>
+                            <div class="form-group">
+								<input class="form-control" name="agama" id="agama" placeholder="Agama" type="text" required>
+                            </div>
+                        
+							<!-- Input Field Starts -->
+							<div class="form-group{{$errors->has('email') ? ' has-error' : ''}}">
+                                <input class="form-control" name="email" id="email" placeholder="Email" type="email" required>
+                                @if($errors->has('email'))
+                                    <span class="help-block">{{$errors->first('email')}}</span>
+                                @endif 
+							</div>
+							<!-- Input Field Ends -->
+							<!-- Input Field Starts -->
+							<div class="form-group">
+								<input class="form-control" name="password" id="password" placeholder="PASSWORD" type="password" required>
+							</div>
+							<!-- Input Field Ends -->
+							<!-- Submit Form Button Starts -->
+							<div class="form-group">
+								<button class="custom-button" type="submit">Buat Akun</button>
+								<p class="text-center">sudah mempunyai akun ? <a href="{{route('login')}}">Masuk</a>
+							</div>
+							<!-- Submit Form Button Ends -->
+						</form>
+						<!-- Form Ends -->
+					</div>
+				</div>
+				<!-- Copyright Text Starts -->
+				{{-- <p class="text-center copyright-text">Copyright © 2018 Amira All Rights Reserved</p> --}}
+				<!-- Copyright Text Ends -->
+			</div>
+		</div>
+    </div>
+    <!-- Wrapper Ends -->
 
-        <!-- JAVASCRIPT -->
-        <script src="{{asset('tAdmin')}}/assets/libs/jquery/jquery.min.js"></script>
-        <script src="{{asset('tAdmin')}}/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="{{asset('tAdmin')}}/assets/libs/metismenu/metisMenu.min.js"></script>
-        <script src="{{asset('tAdmin')}}/assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="{{asset('tAdmin')}}/assets/libs/node-waves/waves.min.js"></script>
-        
-        <!-- App js -->
-        <script src="{{asset('tAdmin')}}/assets/js/app.js"></script>
-    </body>
+    <!-- Template JS Files -->
+    <script src="{{asset('tHomes')}}/js/jquery-2.2.4.min.js"></script>
+    <script src="{{asset('tHomes')}}/js/plugins/jquery.easing.1.3.js"></script>
+    <script src="{{asset('tHomes')}}/js/plugins/bootstrap.min.js"></script>
 
-<!-- Mirrored from themesbrand.com/skote-mvc/layouts/auth-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Jan 2021 08:43:28 GMT -->
+    <!-- Live Style Switcher JS File - only demo -->
+    <script src="{{asset('tHomes')}}/js/styleswitcher.js"></script>
+
+    <!-- Main JS Initialization File -->
+    <script src="{{asset('tHomes')}}/js/custom.js"></script>
+</body>
+
+
+<!-- Mirrored from slimhamdi.net/amira/demos/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Feb 2021 18:29:10 GMT -->
 </html>

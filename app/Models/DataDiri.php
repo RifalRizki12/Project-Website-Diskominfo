@@ -9,12 +9,20 @@ class DataDiri extends Model
     protected $table = 'datadiri';
     protected $fillable = ['nama_depan','nama_belakang','tanggal_lahir','jenis_kelamin','alamat','agama','avatar','user_id','nohp'];
 
+    // public function getAvatar()
+    // {
+    //     if(!$this->avatar){
+    //         return asset ('images/profile/default.jpg');
+    //     }
+    //     return asset('images/profile/data-diri/'.$this->avatar);
+    // }
     public function getAvatar()
     {
-        if(!$this->avatar){
-            return asset ('images/profile/default.jpg');
+        if ($this->avatar) {
+            return asset('avatar/'.$this->avatar);
+        }else {
+            return asset('images/profile/default.jpg');
         }
-        return asset('images/profile/data-diri/'.$this->avatar);
     }
 
     public function user(){

@@ -1,4 +1,5 @@
 @extends('layouts.frontAdmins.frontAdmin')
+@section('title','Tambah Posting - Diskominfo')
 @section('content')
 <div class="main-content">
     <div class="page-content">

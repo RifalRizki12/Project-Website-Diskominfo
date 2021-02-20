@@ -1,4 +1,5 @@
 @extends('layouts.frontAdmins.frontAdmin')
+@section('title','Data Pengguna - Diskominfo')
 @section('content')
 
 <div class="main-content">

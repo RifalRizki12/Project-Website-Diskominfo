@@ -20,6 +20,11 @@ class Post extends Model
         return $this->belongsToMany('App\Models\Tag');
     }
 
+    public function comments()
+    {
+        return $this->morphMany('App\Models\Comment', 'commentable');
+    }
+
     public function thumbnail()
     {
         if ($this->thumbnail) {

@@ -1,4 +1,5 @@
 @extends('layouts.frontAdmins.frontAdmin')
+@section('title','Posting - Diskominfo')
 @section('content')
 
 <div class="main-content">
@@ -30,6 +31,11 @@
                     {{session('sukses')}}
                 </div>
                 @endif
+                @if (session('delete'))
+                <div class="alert alert-success" role="alert">
+                    {{session('delete')}}
+                </div>
+                @endif
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
@@ -55,31 +61,33 @@
 
                                 <tbody>
                                 @foreach ($posts as $post)
-                                <tr>
-                                    
-                                    <td>{{$post->id}}</td>
-                                    <td>
-                                        <a target="_blank" href="{{route('site.single.post',$post->slug )}}">
-                                            {{str_limit($post->title,20)}}
-                                        </a>
-                                    </td>
-                                    <td>{{$post->user->name}}</td>
-                                    <td style="text-align: center">
-                                        <div class="btn-group btn-group-example" role="group">
+                                @if ($post->user_id == auth()->user()->id)
+                                    <tr>
                                         
-                                            <button type="button" class="btn btn-primary btn-sm w-xs">
-                                                <a href="{{route('editPost',[$post->id])}}" style="color: white">
-                                                    <i class="mdi mdi-account-edit"> Edit</i>
-                                                </a>
-                                            </button>
-                                            <button type="button" class="btn btn-danger btn-sm w-xs">
-                                                <a href="{{route('deletePost',[$post->id])}}" style="color: white" onclick="return confirm('Yakin')">
-                                                    <i class="mdi mdi-account-remove"> Hapus</i>
-                                                </a>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                        <td>{{$post->id}}</td>
+                                        <td>
+                                            <a target="_blank" href="{{route('site.single.post',$post->slug )}}">
+                                                {{str_limit($post->title,20)}}
+                                            </a>
+                                        </td>
+                                        <td>{{$post->user->name}}</td>
+                                        <td style="text-align: center">
+                                            <div class="btn-group btn-group-example" role="group">
+                                            
+                                                <button type="button" class="btn btn-primary btn-sm w-xs">
+                                                    <a href="{{route('editPost',[$post->id])}}" style="color: white">
+                                                        <i class="mdi mdi-account-edit"> Edit</i>
+                                                    </a>
+                                                </button>
+                                                <button type="button" class="btn btn-danger btn-sm w-xs">
+                                                    <a href="{{route('deletePost',[$post->id])}}" style="color: white" onclick="return confirm('Yakin')">
+                                                        <i class="mdi mdi-account-remove"> Hapus</i>
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endif
                                 @endforeach
 
                                 </tbody>

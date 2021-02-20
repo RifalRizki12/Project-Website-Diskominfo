@@ -22,8 +22,21 @@ Route::post('/postlogin', 'Auth\AuthController@postlogin')->name('postlogin');
 Route::get('/logout','Auth\AuthController@logout')->name('logout');
 
 Route::get('/','Home\HomeController@index')->name('/');
+Route::get('about','cAdmins\SiteController@about')->name('about');
+Route::get('kontak','cAdmins\SiteController@kontak')->name('kontak');
+Route::resource('tags', 'cAdmins\TagController');
+Route::get('/tags/{id}/show','cAdmins\TagController@show')->name('tagShow');
+Route::resource('category', 'cAdmins\CategoryController');
+Route::get('/category/{id}/show','cAdmins\CategoryController@show')->name('categoryShow');
 Route::get('blog','cAdmins\SiteController@blog')->name('blog');
 Route::get('blogGird','cAdmins\SiteController@blogGird')->name('blogGird');
+
+Route::group(['middleware' => ['auth','checkRole:client']], function () {
+    Route::post('comment/create/{post}','Home\CommentController@buatKomentar')->name('buatKomentar');
+    Route::get('post','Home\HomeController@post')->name('post');
+    Route::post('kirim','Home\HomeController@store')->name('kirim');
+
+});
 
 Route::group(['middleware' => ['auth','checkRole:admin utama,admin']], function () {
     Route::get('/check','cAdmins\DashboardController@check')->name('check');
@@ -68,6 +81,8 @@ Route::group(['middleware' => ['auth','checkRole:admin,admin utama']], function 
     Route::get('/tag/{id}/edit','cAdmins\TagController@edit')->name('editTag');
     Route::post('/tag/{id}/update','cAdmins\TagController@update')->name('updateTag');
     Route::get('/tag/{id}/delete','cAdmins\TagController@delete')->name('deleteTag');
+
+    Route::get('postPengguna','cPengguna\PostPenggunaController@index')->name('postPengguna');
 });
 
 

@@ -1,4 +1,5 @@
 @extends('layouts.frontAdmins.frontAdmin')
+@section('title','Profil - Diskominfo')
 @section('content')
 
 <div class="main-content">
@@ -53,16 +54,6 @@
                                 <div class="col-sm-8">
                                     <div class="pt-4">
                                        
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <h5 class="font-size-15">125</h5>
-                                                <p class="text-muted mb-0">Projects</p>
-                                            </div>
-                                            <div class="col-6">
-                                                <h5 class="font-size-15">$1245</h5>
-                                                <p class="text-muted mb-0">Revenue</p>
-                                            </div>
-                                        </div>
                                         <div class="mt-4">
                                             <a href="{{route('editAdmin',[auth()->user()->datadiri->id])}}" class="btn btn-primary waves-effect waves-light btn-sm">Edit Profile <i class="mdi mdi-arrow-right ml-1"></i></a>
                                         </div>
@@ -108,63 +99,6 @@
                 
                 <div class="col-xl-8">
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mini-stats-wid">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <p class="text-muted font-weight-medium">Completed Projects</p>
-                                            <h4 class="mb-0">125</h4>
-                                        </div>
-
-                                        <div class="mini-stat-icon avatar-sm align-self-center rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-check-circle font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card mini-stats-wid">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <p class="text-muted font-weight-medium">Pending Projects</p>
-                                            <h4 class="mb-0">12</h4>
-                                        </div>
-
-                                        <div class="avatar-sm align-self-center mini-stat-icon rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-hourglass font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card mini-stats-wid">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="media-body">
-                                            <p class="text-muted font-weight-medium">Total Revenue</p>
-                                            <h4 class="mb-0">$36,524</h4>
-                                        </div>
-
-                                        <div class="avatar-sm align-self-center mini-stat-icon rounded-circle bg-primary">
-                                            <span class="avatar-title">
-                                                <i class="bx bx-package font-size-24"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title mb-4">My Post</h4>
@@ -172,21 +106,25 @@
                                 <table class="table table-nowrap table-hover mb-0">
                                     <thead>
                                         <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Projects</th>
-                                            <th scope="col">Start Date</th>
-                                            <th scope="col">Deadline</th>
-                                            <th scope="col">Budget</th>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Judul</th>
+                                            <th scope="col">Tgl Post</th>
+                                            <th scope="col">Tgl Update</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Skote admin UI</td>
-                                            <td>2 Sep, 2019</td>
-                                            <td>20 Oct, 2019</td>
-                                            <td>$506</td>
-                                        </tr>
+                                        @foreach ($posts as $post)
+                                            @if ($post->user_id == auth()->user()->id)
+                                                <tr>
+                                                    <th scope="row">{{$post->id}}</th>
+                                                    <td><a target="_blank" href="{{route('site.single.post',$post->slug )}}">
+                                                        {!!str_limit($post->title,50)!!}</td>
+                                                    </a>
+                                                    <td>{{date('j F Y', strtotime($post->created_at))}}</td>
+                                                    <td>{{date('j F Y', strtotime($post->updated_at))}}</td>
+                                                </tr>
+                                            @endif
+                                        @endforeach
 
                                     </tbody>
                                 </table>
