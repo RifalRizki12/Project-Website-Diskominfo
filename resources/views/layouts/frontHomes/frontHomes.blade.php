@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('tHomes')}}/img/favicon.png">
+    <link rel="shortcut icon" href="/images/logo/logo-diskominfo.png">
 
     @yield('css')
 
@@ -65,7 +65,7 @@
                     <div class="logo">
                         <a data-toggle="collapse" data-target=".navbar-collapse.show" class="navbar-brand" href="{{route('/')}}">
                             <!-- Logo White Starts -->
-                            <img id="logo-light" class="logo-light" src="{{asset('tHomes')}}/img/styleswitcher/logos/yellow.png" alt="logo-light" />
+                            <img id="logo-light" class="logo-light" src="/images/logo/logo.png" alt="logo-light" />
                             <!-- Logo White Ends -->
                             <!-- Logo Black Starts -->
                             <img id="logo-dark" class="logo-dark" src="{{asset('tHomes')}}/img/styleswitcher/logos/logos-dark/yellow.png" alt="logo-dark" />

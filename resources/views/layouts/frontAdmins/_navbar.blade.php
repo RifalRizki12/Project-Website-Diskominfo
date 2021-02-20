@@ -14,10 +14,10 @@
 
                 <a href="{{route('dashboard')}}" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{asset('tAdmin')}}/assets/images/logo-light.svg" alt="" height="22">
+                        <img src="/images/logo/logo-diskominfo.png" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{asset('tAdmin')}}/assets/images/logo-light.png" alt="" height="19">
+                        <img src="/images/logo/logo.png" alt="" height="40">
                     </span>
                 </a>
             </div>

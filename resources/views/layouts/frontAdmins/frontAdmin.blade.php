@@ -10,7 +10,7 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{asset('tAdmin')}}/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="/images/logo/logo1.png">
 
     <!-- Bootstrap Css -->
     <link href="{{asset('tAdmin')}}/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
