@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('tHomes')}}/img/favicon.png">
+    <link rel="shortcut icon" href="/images/logo/logo-diskominfo.png">
 
     <!-- Template CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/bootstrap.min.css" />
@@ -97,7 +97,8 @@
 						
 						<nav class="col-xs-12 text-center" aria-label="Page navigation">
 						  <ul class="pagination">
-							<li>
+							{{$posts->links()}}
+							{{-- <li>
 							  <a href="#" aria-label="Previous">
 								<span aria-hidden="true"><i class="fa fa-angle-double-left"></i></span>
 							  </a>
@@ -110,7 +111,7 @@
 							  <a href="#" aria-label="Next">
 								<span aria-hidden="true"><i class="fa fa-angle-double-right"></i></span>
 							  </a>
-							</li>
+							</li> --}}
 						  </ul>
 						</nav>
 					</div>

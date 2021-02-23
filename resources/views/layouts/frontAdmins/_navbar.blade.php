@@ -17,7 +17,7 @@
                         <img src="/images/logo/logo-diskominfo.png" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="/images/logo/logo.png" alt="" height="40">
+                        <img src="/images/logo/logo.png" alt="" height="35">
                     </span>
                 </a>
             </div>
@@ -65,7 +65,7 @@
                 </button>
             </div>
 
-            <div class="dropdown d-inline-block">
+            {{-- <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="bx bx-bell bx-tada"></i>
@@ -103,17 +103,17 @@
 
                     </div>
                     <div class="p-2 border-top">
-                        <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
+                        <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="{{route('postPengguna')}}">
                             <i class="mdi mdi-arrow-right-circle mr-1"></i> <span key="t-view-more">View More..</span> 
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="{{asset('tAdmin')}}/assets/images/users/avatar-1.jpg"
+                    <img class="rounded-circle header-profile-user" src="/images/profile/default.jpg"
                         alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ml-1" key="t-henry">{{auth()->user()->name}}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
@@ -121,9 +121,9 @@
                 <div class="dropdown-menu dropdown-menu-right">
                     <!-- item-->
                     <a href="{{route('profilesaya')}}" class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle mr-1"></i> <span key="t-profile">Profile</span></a>
-                    <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle mr-1"></i> <span key="t-my-wallet">My Wallet</span></a>
+                    {{-- <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle mr-1"></i> <span key="t-my-wallet">My Wallet</span></a>
                     <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="bx bx-wrench font-size-16 align-middle mr-1"></i> <span key="t-settings">Settings</span></a>
-                    <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle mr-1"></i> <span key="t-lock-screen">Lock screen</span></a>
+                    <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle mr-1"></i> <span key="t-lock-screen">Lock screen</span></a> --}}
                     <div class="dropdown-divider"></div>
                     <a href="{{route('logout')}}" class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                 </div>

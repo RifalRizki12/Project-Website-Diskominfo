@@ -18,19 +18,19 @@
                 <div class="col-md-6 col-sm-6">
                     <div class="info-map-boxes-item fa fa-phone">
                         <h1>Phone &amp; Online</h1>
-                        <p>Phone : +39 1873 2878
-                            <br>Fax : +49 (0) 123 456789-15
-                            <br><a href="#">amira@yourdomain.com</a></p>
+                        <p>Phone : 0332 - 421707
+                            
+                            <br><a href="#">diskominfo@bondowosokab.go.id</a></p>
                     </div>
                 </div>
                 <!-- Left Info Map Box Ends -->
                 <!-- Right Info Map Box Starts -->
                 <div class="col-md-6 col-sm-6">
                     <div class="info-map-boxes-item fa fa-clock-o">
-                        <h1>Working Hours</h1>
-                        <p>Monday-Thursday : 08:00–17:00
-                            <br>Friday & Saturday : 08:00–12:30
-                            <br>Sunday - Closed</p>
+                        <h1>Jam Kerja</h1>
+                        <p>Senin-Kamis : 08:00 – 15:00
+                            <br>Jum'at: 07:00 – 11:00
+                            <br>Sabtu-Minggu - Tutup</p>
                     </div>
                 </div>
                 <!-- Right Info Map Box Ends -->
@@ -40,7 +40,7 @@
     </section>
     <!-- Contact Section Ends -->
     <!-- Contact Form Section Starts -->
-    <section class="contactform">
+    {{-- <section class="contactform">
         <div class="section-overlay">
             <div class="container">
                 <!-- Main Heading Starts -->
@@ -104,20 +104,20 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Contact Form Section Ends -->
     <!-- Logos Section Starts -->
     <section class="logos">
         <div class="container">
             <ul class="bxslider" id="bxslider">
                 <!-- Logos Items Starts -->
-                <li><img id="3docean" src="{{asset('tHomes')}}/img/logos-slider/3docean-dark-background.png" alt="3docean"></li>
-                <li><img id="activeden" src="{{asset('tHomes')}}/img/logos-slider/activeden-dark-background.png" alt="activeden"></li>
-                <li><img id="audiojungle" src="{{asset('tHomes')}}/img/logos-slider/audiojungle-dark-background.png" alt="audiojungle"></li>
-                <li><img id="codecanyon" src="{{asset('tHomes')}}/img/logos-slider/codecanyon-dark-background.png" alt="codecanyon"></li>
-                <li><img id="graphicriver" src="{{asset('tHomes')}}/img/logos-slider/graphicriver-dark-background.png" alt="graphicriver"></li>
-                <li><img id="photodune" src="{{asset('tHomes')}}/img/logos-slider/photodune-dark-background.png" alt="photodune"></li>
-                <li><img id="themeforest" src="{{asset('tHomes')}}/img/logos-slider/themeforest-dark-background.png" alt="themeforest"></li>
+                <li><img id="3docean" src="/images/logo/logo.png" style="max-width: 100%" alt="3docean"></li>
+                <li><img id="activeden" src="/images/logo/logo.png" style="max-width: 100%" alt="activeden"></li>
+                <li><img id="audiojungle" src="/images/logo/logo.png" style="max-width: 100%" alt="audiojungle"></li>
+                <li><img id="codecanyon" src="/images/logo/logo.png" style="max-width: 100%" alt="codecanyon"></li>
+                <li><img id="graphicriver" src="/images/logo/logo.png" style="max-width: 100%" alt="graphicriver"></li>
+                <li><img id="photodune" src="/images/logo/logo.png" style="max-width: 100%" alt="photodune"></li>
+                <li><img id="themeforest" src="/images/logo/logo.png" style="max-width: 100%" alt="themeforest"></li>
                 <!-- Logos Items Ends -->
             </ul>
         </div>

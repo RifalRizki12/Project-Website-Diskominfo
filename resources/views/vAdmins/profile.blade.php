@@ -45,7 +45,7 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="avatar-md profile-user-wid mb-4">
-                                        <img src="{{auth()->user()->datadiri->getAvatar()}}" alt="" class="img-thumbnail rounded-circle">
+                                        <img src="/images/profile/default.jpg" alt="" class="img-thumbnail rounded-circle">
                                     </div>
                                     <h5 class="font-size-15 text-truncate">{{auth()->user()->datadiri->nama_depan}} {{auth()->user()->datadiri->nama_belakang}}</h5>
                                     <p class="text-muted mb-0 text-truncate">{{auth()->user()->datadiri->jenis_kelamin}}</p>

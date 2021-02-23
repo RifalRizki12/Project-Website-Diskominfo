@@ -21,6 +21,11 @@
             </div>
 
             <div class="row">
+                @if (session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    {{session('sukses')}}
+                </div>
+                @endif
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
@@ -87,14 +92,14 @@
                                     <div class="col-md-10">
                                         <input name="email" class="form-control" type="email" value="{{$admin->user->email}}" id="example-email-input">
                                     </div>
-                                </div>
+                                </div><br>
                                 {{-- <div class="form-group row">
                                     <label for="example-password-input" class="col-md-2 col-form-label">Password</label>
                                     <div class="col-md-10">
                                         <input class="form-control" type="password" placeholder="hunter2" id="example-password-input">
                                     </div>
                                 </div> --}}
-                                <div class="form-group row{{$errors->has('avatar') ? ' has-error' : ''}}">
+                                {{-- <div class="form-group row{{$errors->has('avatar') ? ' has-error' : ''}}">
                                     <label for="example-file-input"  class="col-md-2 col-form-label">Avatar</label>
                                     <div class="col-md-10">
                                         <input type="file" name="avatar" class="form-control" >
@@ -102,18 +107,20 @@
                                             <span class="help-block">{{$errors->first('avatar')}}</span>
                                         @endif 
                                     </div>
+                                </div><br> --}}
+
+                                <div class="btn-group btn-group-example mb-3" role="group">
+                                    <button type="submit" class="btn btn-primary w-xs "><i class="mdi mdi-content-save">   Simpan</i></button>
+                                    <button type="button" class="btn btn-danger w-xs">
+                                        <a href="{{route('dataAdmin')}}" style="color: white;text-align: center" >
+                                            <i class="mdi mdi-close-circle">   Batal</i>
+                                        </a>
+                                    </button>
+                                    
                                 </div>
 
-                            </div>
-
-                            <div class="btn-group btn-group-example mb-3" role="group">
-                                <button type="submit" class="btn btn-primary w-xs"><i class="mdi mdi-content-save">   Simpan</i></button>
-                                <a href="{{route('dataAdmin')}}">
-                                    <button type="button" class="btn btn-danger w-xs"><i class="mdi mdi-close-circle">   Batal</i></button>
-                                </a>
-                            </div>
-
                             </form>
+                        </div>
 
                     </div>
                 </div> <!-- end col -->

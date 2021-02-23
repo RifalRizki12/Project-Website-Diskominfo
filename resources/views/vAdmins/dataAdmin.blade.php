@@ -26,6 +26,21 @@
             <!-- end page title -->
 
             <div class="row">
+                @if (session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    {{session('sukses')}}
+                </div>
+                @endif
+                @if (session('update'))
+                <div class="alert alert-warning" role="alert">
+                    {{session('update')}}
+                </div>
+                @endif
+                @if (session('delete'))
+                <div class="alert alert-success" role="alert">
+                    {{session('delete')}}
+                </div>
+                @endif
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
@@ -89,7 +104,6 @@
         </div> <!-- container-fluid -->
     </div>
     <!-- End Page-content -->
-
     
     <footer class="footer">
         <div class="container-fluid">
@@ -146,13 +160,13 @@
               </div>
 
               @if (Auth::user()->role=='admin utama')
-              <div class="form-group" >
-                <label for="exampleFormControlSelect1">Role</label>
-                <select name="role" class="form-control" id="exampleFormControlSelect1">
-                    <option value="admin"{{(old('role') == 'admin') ? ' selected' : ''}}>Admin</option>
-                    <option value="admin utama"{{(old('role') == 'admin utama') ? ' selected' : ''}}>Admin Utama</option>
-                </select>
-              </div>
+                <div class="form-group" >
+                    <label for="exampleFormControlSelect1">Role</label>
+                    <select name="role" class="form-control" id="exampleFormControlSelect1">
+                        <option value="admin"{{(old('role') == 'admin') ? ' selected' : ''}}>Admin</option>
+                        <option value="admin utama"{{(old('role') == 'admin utama') ? ' selected' : ''}}>Admin Utama</option>
+                    </select>
+                </div>
               @endif
   
               {{-- <div class="form-group">
@@ -182,14 +196,13 @@
                   <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="3" >{{old('alamat')}}</textarea>
               </div>
     
-              <div class="form-group{{$errors->has('avatar') ? ' has-error' : ''}}" >
+              {{-- <div class="form-group{{$errors->has('avatar') ? ' has-error' : ''}}" >
                   <label for="exampleFormControlTextarea1">Avatar</label>
                   <input type="file" name="avatar" class="form-control">
                   @if($errors->has('avatar'))
                       <span class="help-block">{{$errors->first('avatar')}}</span>
                   @endif  
-              </div>
-  
+              </div> --}}
           
               <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

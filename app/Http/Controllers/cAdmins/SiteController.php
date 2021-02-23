@@ -42,4 +42,8 @@ class SiteController extends Controller
         $tags = Tag::all();
         return view('vHomes.blogSingle',compact(['post','category','tags']));
     }
+    public function vidio()
+    {
+        return view('vHomes.vVidio.index');
+    }
 }

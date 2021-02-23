@@ -7,11 +7,11 @@
 <!-- Mirrored from slimhamdi.net/amira/demos/blog-post.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Feb 2021 18:29:05 GMT -->
 <head>
     <meta charset="utf-8" />
-    <title>Blog Post, Amira - Creative Multipurpose Template</title>
+    <title>Detail Informasi - Diskominfo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('tHomes')}}/img/favicon.png">
+    <link rel="shortcut icon" href="/images/logo/logo1.png">
 
     <!-- Template CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/bootstrap.min.css" />
@@ -54,12 +54,10 @@
                     <div class="meta">
                         <span><i class="fa fa-user"></i> <a href="#">{{$post->user->name}}</a></span>
                         <span><i class="fa fa-calendar"></i> {{$post->created_at->format('d M Y')}}</span>
-                        <span><i class="fa fa-commenting"></i> <a href="#">29 comments</a></span>
                         <span><i class="fa fa-tags"></i> 
                             @foreach ($post->tags as $tag)
                                 <a href="#">{{$tag->name}}</a>  
                             @endforeach</span>
-                        <span><i class="fa fa-link"></i> <a href="#">permalink</a></span>
                     </div>
                     <!-- Meta Ends -->
                 </div>
@@ -93,18 +91,17 @@
                                     {{$tag->name}},
                                     @endforeach
                                 </span>
-                                <span><i class="fa fa-link"></i> <a href="#">permalink</a></span>
                             </div>
                             <!-- Meta Ends -->
                             <!-- Comments Starts -->
-                        <div class="comments">
+                        {{-- <div class="comments">
                             <h3 class="comments-heading uppercase">Komentar</h3>
                             @foreach ($post->comments as $comment)
                                 <ul class="comments-list">
                                     <li>
                                         <!-- Comment Starts -->
                                         <div class="comment">
-                                            <img class="comment-avatar pull-left" alt="" src="{{asset('tHomes')}}/img/blog/user1.jpg">
+                                            <img class="comment-avatar pull-left" alt="" src="/images/profile/default.jpg">
                                             <div class="comment-body">
                                                 <div class="meta-data">
                                                     <span class="comment-author">{{$comment->user->name}}</span>
@@ -117,27 +114,7 @@
                                                 </div>	
                                             </div>
                                         </div>
-                                        <!-- Comment Ends -->
-                                        {{-- <ul class="comments-reply">
-                                            <li>
-                                                <!-- Comment Starts -->
-                                                <div class="comment">
-                                                    <img class="comment-avatar pull-left" alt="" src="{{asset('tHomes')}}/img/blog/user2.jpg">
-                                                    <div class="comment-body">
-                                                        <div class="meta-data">
-                                                            <span class="comment-author">Rawia Chniti</span>
-                                                            <span class="comment-date pull-right">March 29, 2017</span>
-                                                        </div>
-                                                        <p class="comment-content">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehen.</p>
-                                                        <div>
-                                                            <a class="comment-reply" href="#">Reply</a>
-                                                        </div>	
-                                                    </div>
-                                                </div>
-                                                <!-- Comment Ends -->
-                                            </li>
-                                        </ul> --}}
+
                                         
                                     </li>
                                 </ul> 
@@ -165,7 +142,7 @@
                                 </div>
                                 <!-- Comments Form Ends -->
                             @endguest
-                        </div>
+                        </div> --}}
                         </article>
                         <!-- Article Ends -->
                     </div>

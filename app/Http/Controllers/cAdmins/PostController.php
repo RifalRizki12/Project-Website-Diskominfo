@@ -18,6 +18,12 @@ class PostController extends Controller
         return view('vAdmins.vPosts.index',compact(['posts']));
     }
 
+    public function allPosts()
+    {
+        $posts = Post::all();
+        return view('vAdmins.vPostAll.index',compact(['posts']));
+    }
+
     public function create()
     {
         $tags = Tag::all();
@@ -81,7 +87,7 @@ class PostController extends Controller
         }
         $post->save();
         $post->tags()->sync($request->tags);
-        return redirect('posts')->with('delete','Post Baru Berhasil Di Edit');
+        return redirect('posts')->with('update','Post Baru Berhasil Di Edit');
     }
 
     public function delete($id)
@@ -90,7 +96,7 @@ class PostController extends Controller
         Storage::delete($data->thumbnail);
         $data->tags()->detach();
         $data->delete();
-        return redirect()->back()->with('sukses','Postingan Berhasil Dihapus');
+        return redirect()->back()->with('delete','Postingan Berhasil Dihapus');
     }
 
 }

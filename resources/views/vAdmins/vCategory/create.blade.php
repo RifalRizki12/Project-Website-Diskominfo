@@ -67,7 +67,7 @@
                                 <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama Category</th>
+                                    <th>Nama Kategori</th>
                                     <th>Tanggal Edit </th>
                                     <th>Aksi</th>
                                 </tr>

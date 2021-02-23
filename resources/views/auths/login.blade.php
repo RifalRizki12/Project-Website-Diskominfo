@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('tHomes')}}/img/favicon.png">
+    <link rel="shortcut icon" href="/images/logo/logo1.png">
 
     <!-- Template CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/bootstrap.min.css" />
@@ -39,7 +39,7 @@
     <!-- Preloader Starts -->
     <div class="preloader" id="preloader">
         <div class="logopreloader">
-            <img src="{{asset('tHomes')}}/img/styleswitcher/logos/yellow.png" alt="logo-black">
+            <img src="/images/logo/logo.png" style="max-width: 50%" >
         </div>
         <div class="loader" id="loader"></div>
     </div>
@@ -51,7 +51,7 @@
 			<div class="hidden-xs col-sm-4 col-md-4 col-lg-4">
 				<!-- Logo Starts -->
 				<a class="logo" href="{{route('/')}}">
-					<img id="single-logo" class="img-responsive" src="{{asset('tHomes')}}/img/styleswitcher/logos/yellow.png" alt="logo">
+					<img id="single-logo" class="img-responsive" src="/images/logo/logo.png" alt="logo">
 				</a>
 				<!-- Logo Ends -->
 				<!-- Slider Starts -->
@@ -103,8 +103,8 @@
 			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 				<!-- Logo Starts -->
 				<a class="visible-xs" href="{{route('/')}}">
-					<img id="logo-mobile-light" class="img-responsive mobile-logo white-l" src="{{asset('tHomes')}}/img/styleswitcher/logos/yellow.png" alt="logo">
-					<img id="logo-mobile-dark" class="img-responsive mobile-logo dark-l" src="{{asset('tHomes')}}/img/styleswitcher/logos/logos-dark/yellow.png" alt="logo">
+					<img id="logo-mobile-light" class="img-responsive mobile-logo white-l" src="/images/logo/logo.png" style="max-width: 70%" alt="logo">
+					<img id="logo-mobile-dark" class="img-responsive mobile-logo dark-l" src="/images/logo/logo.png" style="max-width: 70%" alt="logo">
 				</a>
 				<!-- Logo Ends -->
 				<div class="form-container">

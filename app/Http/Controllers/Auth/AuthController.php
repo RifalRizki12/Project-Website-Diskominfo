@@ -49,11 +49,7 @@ class AuthController extends Controller
         //insert ke tabel data diri
         $request->request->add(['user_id' => $user->id ]);
         $datadiri = \App\Models\DataDiri::create($request->all());
-        if($request->hasFile('avatar')){
-            $request->file('avatar')->move('/images/profile/data-diri/',$request->file('avatar')->getClientOriginalName());
-            $datadiri->avatar = $request->file('avatar')->getClientOriginalName();
-            $datadiri->save();
-        }
+        $datadiri->save();
 
         alert()->success('Kamu Berhasil Register :)', 'Terimakasih');
         return redirect('/login');

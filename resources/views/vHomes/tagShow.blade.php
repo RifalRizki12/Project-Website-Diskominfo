@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('tHomes')}}/img/favicon.png">
+    <link rel="shortcut icon" href="/images/logo/logo1.png">
 
     <!-- Template CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/bootstrap.min.css" />

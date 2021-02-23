@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{asset('tHomes')}}/img/favicon.png">
+    <link rel="shortcut icon" href="/images/logo/logo-diskominfo.png">
 
     <!-- Template CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{asset('tHomes')}}/css/bootstrap.min.css" />
@@ -39,7 +39,7 @@
     <!-- Preloader Starts -->
     <div class="preloader" id="preloader">
         <div class="logopreloader">
-            <img src="{{asset('tHomes')}}/img/styleswitcher/logos/yellow.png" alt="logo-black">
+            <img src="/images/logo/logo.png" alt="logo-black">
         </div>
         <div class="loader" id="loader"></div>
     </div>
@@ -51,7 +51,7 @@
 			<div class="hidden-xs col-sm-4 col-md-4 col-lg-4">
 				<!-- Logo Starts -->
 				<a class="logo" href="{{route('/')}}">
-					<img id="single-logo" class="img-responsive" src="{{asset('tHomes')}}/img/styleswitcher/logos/yellow.png" alt="logo">
+					<img id="single-logo" class="img-responsive" src="/images/logo/logo.png" alt="logo">
 				</a>
 				<!-- Logo Ends -->
 				<!-- Slider Starts -->
@@ -129,9 +129,6 @@
                             <div class="form-group">
 								<input class="form-control" name="nama_belakang" id="nama_belakang" placeholder="Nama belakang" type="text" >
                             </div>
-                            <div class="form-group">
-								<input class="form-control" name="agama" id="agama" placeholder="Agama" type="text" required>
-                            </div>
                         
 							<!-- Input Field Starts -->
 							<div class="form-group{{$errors->has('email') ? ' has-error' : ''}}">
@@ -174,6 +171,7 @@
 
     <!-- Main JS Initialization File -->
     <script src="{{asset('tHomes')}}/js/custom.js"></script>
+	@include('sweetalert::alert')
 </body>
 
 

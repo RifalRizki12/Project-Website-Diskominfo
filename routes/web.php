@@ -30,9 +30,9 @@ Route::resource('category', 'cAdmins\CategoryController');
 Route::get('/category/{id}/show','cAdmins\CategoryController@show')->name('categoryShow');
 Route::get('blog','cAdmins\SiteController@blog')->name('blog');
 Route::get('blogGird','cAdmins\SiteController@blogGird')->name('blogGird');
+Route::get('vidio','cAdmins\SiteController@vidio')->name('vidio');
 
-Route::group(['middleware' => ['auth','checkRole:client']], function () {
-    Route::post('comment/create/{post}','Home\CommentController@buatKomentar')->name('buatKomentar');
+Route::group(['middleware' => ['auth','checkRole:client,admin,admin utama']], function () {
     Route::get('post','Home\HomeController@post')->name('post');
     Route::post('kirim','Home\HomeController@store')->name('kirim');
 
@@ -62,6 +62,7 @@ Route::group(['middleware' => ['auth','checkRole:admin,admin utama']], function 
     Route::get('/client/{id}/delete','cAdmins\DataClientController@delete')->name('deleteClient');
 
     Route::get('/posts','cAdmins\PostController@index')->name('posts');
+    Route::get('/allPosts','cAdmins\PostController@allPosts')->name('allPosts');
     Route::get('/add','cAdmins\PostController@create')->name('add');
     Route::post('/storePost','cAdmins\PostController@store')->name('storePost');
     Route::get('/posts/{id}/edit','cAdmins\PostController@edit')->name('editPost');

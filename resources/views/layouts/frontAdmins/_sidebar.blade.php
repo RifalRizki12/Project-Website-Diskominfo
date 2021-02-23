@@ -26,7 +26,8 @@
                             <a href="javascript: void(0);" class="has-arrow" key="t-vertical">Admin</a>
                             <ul class="sub-menu" aria-expanded="true">
                                 <li><a href="{{route('dataAdmin')}}" key="t-light-sidebar">Data Admin</a></li>
-                                <li><a href="{{route('posts')}}" key="t-compact-sidebar">Posting</a></li>
+                                <li><a href="{{route('posts')}}" key="t-compact-sidebar">Posting Saya</a></li>
+                                <li><a href="{{route('allPosts')}}" key="t-compact-sidebar">Semua Posting</a></li>
                                 <li><a href="{{route('createCategory')}}" key="t-icon-sidebar">Category</a></li>
                                 <li><a href="{{route('createTag')}}" key="t-icon-sidebar">Tag</a></li>
                             </ul>
@@ -77,7 +78,8 @@
                             <a href="javascript: void(0);" class="has-arrow" key="t-vertical">Admin</a>
                             <ul class="sub-menu" aria-expanded="true">
                                 <li><a href="{{route('dataAdmin')}}" key="t-light-sidebar">Data Admin</a></li>
-                                <li><a href="{{route('posts')}}" key="t-compact-sidebar">Posting</a></li>
+                                <li><a href="{{route('posts')}}" key="t-compact-sidebar">Posting Saya</a></li>
+                                <li><a href="{{route('allPosts')}}" key="t-compact-sidebar">Semua Posting</a></li>
                                 <li><a href="{{route('createCategory')}}" key="t-icon-sidebar">Category</a></li>
                                 <li><a href="{{route('createTag')}}" key="t-icon-sidebar">Tag</a></li>
                             </ul>

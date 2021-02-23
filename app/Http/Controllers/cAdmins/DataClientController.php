@@ -19,7 +19,7 @@ class DataClientController extends Controller
     {
         $this->validate($request,[
             'email' => 'required|email|unique:users',
-            'avatar' => 'mimes:jpeg,png,jpg,gif,svg',
+            // 'avatar' => 'mimes:jpeg,png,jpg,gif,svg',
         ]);
         
         //insert ke tabel Users
@@ -34,11 +34,11 @@ class DataClientController extends Controller
         //insert ke tabel control
         $request->request->add(['user_id' => $user->id ]);
         $datadiri = \App\models\DataDiri::create($request->all());
-        if($request->hasFile('avatar')){
-            $request->file('avatar')->move('images/profile/data-diri/',$request->file('avatar')->getClientOriginalName());
-            $datadiri->avatar = $request->file('avatar')->getClientOriginalName();
-            $datadiri->save();
-        }
+        // if($request->hasFile('avatar')){
+        //     $request->file('avatar')->move('images/profile/data-diri/',$request->file('avatar')->getClientOriginalName());
+        //     $datadiri->avatar = $request->file('avatar')->getClientOriginalName();
+        //     $datadiri->save();
+        // }
         $datadiri->save();
 
         return redirect('/dataClient');
@@ -63,11 +63,11 @@ class DataClientController extends Controller
         $data=$request->all();
         // unset($data['email']);
         $client->update($data);
-        if($request->hasFile('avatar')){
-            $request->file('avatar')->move('images/profile/data-diri/',$request->file('avatar')->getClientOriginalName());
-            $client->avatar = $request->file('avatar')->getClientOriginalName();
-            $client->save();
-        }
+        // if($request->hasFile('avatar')){
+        //     $request->file('avatar')->move('images/profile/data-diri/',$request->file('avatar')->getClientOriginalName());
+        //     $client->avatar = $request->file('avatar')->getClientOriginalName();
+        // }
+        $client->save();
         return redirect('dataClient');
     }
 

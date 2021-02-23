@@ -3,7 +3,7 @@
 @section('content')
 <div class="preloader" id="preloader">
     <div class="logopreloader">
-        <img src="{{asset('tHomes')}}/img/styleswitcher/logos/yellow.png" alt="logo-black">
+        <img src="/images/logo/logo.png" style="max-width: 50%" alt="logo-black">
     </div>
     <div class="loader" id="loader"></div>
 </div>
@@ -21,11 +21,11 @@
                             <!-- LAYERS -->
 
                             <!-- LAYER NR. 1 -->
-                            <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontsize="['70','70','70','45']" data-lineheight="['70','70','70','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="chars" data-splitout="none" data-responsive_offset="on" data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' data-textAlign="['left','left','left','left']" data-elementdelay="0.05" style="z-index: 5; white-space: nowrap;">WE ARE AMIRA
+                            <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-fontsize="['70','70','70','45']" data-lineheight="['70','70','70','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="chars" data-splitout="none" data-responsive_offset="on" data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' data-textAlign="['left','left','left','left']" data-elementdelay="0.05" style="z-index: 5; white-space: nowrap;">DISKOMINFO
                             </div>
 
                             <!-- LAYER NR. 2 -->
-                            <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['52','52','52','51']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1500" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: nowrap;">CREATIVE MULTIPURPOSE TEMPLATE
+                            <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['52','52','52','51']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1500" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: nowrap;">INFORMASI BERITA
                             </div>
 
                             <!-- LAYER NR. 3 -->
@@ -53,8 +53,8 @@
             <div class="container">
                 <!-- Main Heading Starts -->
                 <div class="text-center top-text">
-                    <h1><span>About</span> Us</h1>
-                    <h4>Who We Are</h4>
+                    <h1><span>Tentang</span> Kami</h1>
+                    <h4>Siapa Kita</h4>
                 </div>
                 <!-- Main Heading Ends -->
                 <!-- Divider Starts -->
@@ -67,35 +67,32 @@
                 <!-- About Content Starts -->
                 <div class="row about-content">
                     <div class="col-sm-12 col-md-6 col-lg-6 about-left-side">
-                        <h3 class="title-about">WE ARE <strong>AMIRA</strong></h3>
+                        <h3 class="title-about">WE ARE <strong>DISKOMINFO</strong></h3>
                         <hr>
-                        <p>We are a leading company sit amet, consectetur adipisicing elit. Minus obcaecati pariatur officiis molestias eveniet harum laudantium obcaecati pariatur officiis molestias eveniet harum laudantium sed optio iste. </p>
+                        <p>Visi Kabupaten Bondowoso yang dituangkan ke dalam Rencana Pembangunan Jangka Panjang Daerah (RPJPD) Tahun 2005 – 2025 adalah “Mewujudkan Kabupaten Bondowoso Sebagai Kawasan Agribisnis Yang Maju, Religius, Adil dan Makmur”.
+                            Visi ini dilaksanakan untuk mencapai tujuan yang selaras dengan tujuan pembangunan nasional yaitu mewujudkan masyarakat yang maju, adil dan makmur; serta tujuan pembangunan Provinsi Jawa Timur yang menitikberatkan pada agribisnis. Untuk mewujudkan Kabupaten Bondowoso yang maju, adil dan makmur dilakukan melalui prioritas pembangunan bidang pertanian dengan tetap melaksanakan kehidupan bernuansa religius.</p>
                         <!-- Tabs Heading Starts -->
                         <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#menu1">Our Mission</a></li>
-                            <li><a data-toggle="tab" href="#menu2">Our advantages</a></li>
-                            <li><a data-toggle="tab" href="#menu3">Our guarantees</a></li>
+                            <li class="active"><a data-toggle="tab" href="#menu1">Misi Kita</a></li>
+                            <li><a data-toggle="tab" href="#menu2">Prioritas Pembangunan Daerah</a></li>
                         </ul>
                         <!-- Tabs Heading Ends -->
                         <!-- Tabs Content Starts -->
                         <div class="tab-content">
                             <div id="menu1" class="tab-pane fade in active">
-                                <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
+                                <p>Membangun Kemandirian Ekonomi Bondowoso dengan Memperkuat Sektor Pertanian, Perkebunan, Peternakan serta Sektor lainnya dengan Menggerakkan Ekonomi Kerakyatan maupun Lapangan Kerja,</p>
                             </div>
                             <div id="menu2" class="tab-pane fade">
-                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            </div>
-                            <div id="menu3" class="tab-pane fade">
-                                <p>Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                                <p>Pembangunan kualitas keagamaan,Pembangunan kualitas dan cakupan pendidikan,Peningkatan derajat kesehatan masyarakat,Pengentasan kemiskinan melalui pembangunan ekonomi rakyat,</p>
                             </div>
                         </div>
                         <!-- Tabs Content Ends -->
-                        <a class="custom-button" href="about.html">Learn more about us</a>
+                        <a class="custom-button" href="{{route('about')}}">Lebih Lanjut Tentang Kami</a>
                     </div>
                     <div class="col-md-6 col-lg-6 about-right-side">
-                        <div class="full-image-container hovered">
-                            <img class="img-responsive hidden-xs" src="{{asset('tHomes')}}/img/about.jpg" alt="">
-                            <div class="full-image-overlay">
+                        <div class="full-image-container">
+                            <img class="img-responsive hidden-xs" src="/images/logo/kepala.jpg" alt="">
+                            {{-- <div class="full-image-overlay">
                                 <h3>Why <strong>Choose Us</strong></h3>
                                 <ul class="list-why-choose-us">
                                     <li>Clean Code & Design</li>
@@ -105,7 +102,7 @@
                                     <li>Easy Customization</li>
                                     <li>& Much More ...</li>
                                 </ul>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -121,12 +118,12 @@
                 <div class="container">
                     <!-- Main Heading Starts -->
                     <div class="text-center top-text">
-                        <h1><span>Video</span> Promo</h1>
-                        <h4>Made with love for you</h4>
+                        <h1><span>Video</span> Tutorial Kirim <span>Informasi</span></h1>
+                        <h4>Cara penggunaan </h4>
                     </div>
                     <!-- Main Heading Ends -->
                     <div class="video-content">
-                        <p class="text-center">See Amira like you've never seen it before! Watch our new promo video,<br> and discover just what an Amira membership can do for you!</p>
+                        <p class="text-center">Jika para pengguna masih belum tau cara untuk mengirim informasi hoaks,phising,scamming(penipuan),<br> Anda bisa menontoh vidio ini terlebih dahulu!</p>
                         <!-- Video Play Starts -->
                         <div class="magnific-popup-gallery">
                             <div class="btn-wrapper text-center"><a class="{{asset('tHomes')}}/image-wrap mfp-youtube" href="https://www.youtube.com/watch?v=0gv7OC9L2s8"></a></div>
@@ -144,8 +141,8 @@
             <div class="container">
                 <!-- Main Heading Starts -->
                 <div class="text-center top-text">
-                    <h1><span>Our</span> Services</h1>
-                    <h4>What We Doing</h4>
+                    <h1><span>Macam - Macam</span> Informasi penipuan</h1>
+                    <h4>Penjelasan</h4>
                 </div>
                 <!-- Main Heading Starts -->
                 <!-- Divider Starts -->
@@ -160,12 +157,12 @@
                     <!-- Service Item Starts -->
                     <div class="col-lg-4 col-md-6 col-sm-12 services-box-item">
                         <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-leaf" data-headline="Creative Solutions"></span>
+                        <span class="services-box-item-cover fa fa-money" data-headline="Scam (Penipuan)"></span>
                         <!-- Service Item Cover Ends -->
                         <!-- Service Item Content Starts -->
-                        <div class="services-box-item-content fa fa-leaf">
-                            <h2>Creative Solutions</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+                        <div class="services-box-item-content fa fa-money">
+                            <h2>Scam (Penipuan)</h2>
+                            <p>Scam adalah segala bentuk tindakan yang sudah direncakan yang bertujuan untuk mendapatkan uang dengan cara menipu atau mengakali orang lain. Kalau dipikir-pikir, cara yang demikian adalah cara yang jahat.</p>
                         </div>
                         <!-- Service Item Content Ends -->
                     </div>
@@ -174,12 +171,13 @@
                     <!-- Service Item Starts -->
                     <div class="col-lg-4 col-md-6 col-sm-12 services-box-item">
                         <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-anchor" data-headline="Featured Services"></span>
+                        <span class="services-box-item-cover fa fa-warning" data-headline="Phising"></span>
                         <!-- Service Item Cover Ends -->
                         <!-- Service Item Content Starts -->
-                        <div class="services-box-item-content fa fa-anchor">
-                            <h2>Featured Services</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+                        <div class="services-box-item-content fa fa-warning">
+                            <h2>Apa Itu Phishing?</h2>
+                            <p>Phising adalah upaya untuk mendapatkan informasi data seseorang dengan teknik pengelabuan.Data yang menjadi sasaran phising adalah data pribadi,data akun (username dan password).
+                            </p>
                         </div>
                         <!-- Service Item Content Ends -->
                     </div>
@@ -188,52 +186,12 @@
                     <!-- Service Item Starts -->
                     <div class="col-lg-4 col-md-6 col-sm-12 services-box-item">
                         <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-comments-o" data-headline="Custom Design"></span>
+                        <span class="services-box-item-cover fa fa-hacker-news" data-headline="Berita Hoax"></span>
                         <!-- Service Item Cover Ends -->
                         <!-- Service Item Content Starts -->
-                        <div class="services-box-item-content fa fa-comments-o">
-                            <h2>Custom Design</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
-                        </div>
-                        <!-- Service Item Content Ends -->
-                    </div>
-                    <!-- Service Item Ends -->
-
-                    <!-- Service Item Starts -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 services-box-item">
-                        <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-support" data-headline="Technical Support"></span>
-                        <!-- Service Item Cover Ends -->
-                        <div class="services-box-item-content fa fa-support">
-                            <h2>Technical Support</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
-                        </div>
-                    </div>
-                    <!-- Service Item Ends -->
-
-                    <!-- Service Item Starts -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 services-box-item">
-                        <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-cogs" data-headline="Responsive Design"></span>
-                        <!-- Service Item Cover Ends -->
-                        <!-- Service Item Content Starts -->
-                        <div class="services-box-item-content fa fa-cogs">
-                            <h2>Responsive Design</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
-                        </div>
-                        <!-- Service Item Content Ends -->
-                    </div>
-                    <!-- Service Item Ends -->
-
-                    <!-- Service Item Starts -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 services-box-item">
-                        <!-- Service Item Cover Starts -->
-                        <span class="services-box-item-cover fa fa-file-pdf-o" data-headline="Well Documented"></span>
-                        <!-- Service Item Cover Ends -->
-                        <!-- Service Item Content Starts -->
-                        <div class="services-box-item-content fa fa-file-pdf-o">
-                            <h2>Well Documented</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+                        <div class="services-box-item-content fa fa-hacker-news">
+                            <h2>Apa Itu Hoax ?</h2>
+                            <p>Hoax adalah sebuah kebohongan atau informasi sesat yang sengaja disamarkan agar terlihat benar . Sedangkan Berita Hoax adalah sebuah publikasi yang terlihat seperti berita faktual , namun ternyata berisi kebohongan dan fitnah .</p>
                         </div>
                         <!-- Service Item Content Ends -->
                     </div>
@@ -244,351 +202,6 @@
             </div>
         </section>
         <!-- Services Section Ends -->
-        <!-- Testimonials Section Starts -->
-        <section class="testimonials">
-            <div class="section-overlay">
-                <!-- Container Starts -->
-                <div class="container">
-                    <!-- Main Heading Starts -->
-                    <div class="text-center top-text">
-                        <h1><span>Happy</span> Customers</h1>
-                        <h4>Testimonials</h4>
-                    </div>
-                    <!-- Main Heading Starts -->
-                    <!-- Blockquotes Starts -->
-                    <div id="quote-carousel" class="carousel slide" data-ride="carousel">
-                        <!-- Wrapper For Sliders Starts -->
-                        <!-- Indicators Starts -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#quote-carousel" data-slide-to="1"></li>
-                            <li data-target="#quote-carousel" data-slide-to="2"></li>
-                        </ol>
-                        <!-- Indicators Ends -->
-                        <div class="carousel-inner">
-                            <!-- Quote #1 Starts -->
-                            <div class="item active">
-                                <blockquote>
-                                    <img class="img-circle img-responsive" src="{{asset('tHomes')}}/img/testimonial/client1.jpg" alt="client">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu nt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptat</p>
-                                    <h5>Miss Elina Pool</h5>
-                                    <h6>Developer - Adobe</h6>
-                                </blockquote>
-                            </div>
-                            <!-- Quote #1 Ends -->
-                            <!-- Quote #2 Starts -->
-                            <div class="item">
-                                <blockquote>
-                                    <img class="img-circle img-responsive" src="{{asset('tHomes')}}/img/testimonial/client2.jpg" alt="client">
-                                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu</p>
-                                    <h5>Mr. Antoine Varane</h5>
-                                    <h6>Manager - Twitter</h6>
-                                </blockquote>
-                            </div>
-                            <!-- Quote #2 Ends -->
-                            <!-- Quote #3 Starts -->
-                            <div class="item">
-                                <blockquote>
-                                    <img class="img-circle img-responsive" src="{{asset('tHomes')}}/img/testimonial/client3.jpg" alt="client">
-                                    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
-                                    <h5>Miss Lucy Walker</h5>
-                                    <h6>Manager - Envato</h6>
-                                </blockquote>
-                            </div>
-                            <!-- Quote #3 Ends -->
-                        </div>
-                        <!-- Wrapper For Sliders Ends -->
-                    </div>
-                    <!-- Blockquotes Ends -->
-                </div>
-                <!-- Container Ends -->
-            </div>
-        </section>
-        <!-- Testimonials Section Ends -->
-        <!-- Portfolio Section Starts -->
-        <section class="portfolio">
-            <!-- Container Starts -->
-            <div class="container">
-                <!-- Main Heading Starts -->
-                <div class="text-center top-text">
-                    <h1><span>Our</span> Portfolio</h1>
-                    <h4>Our latest Works</h4>
-                </div>
-                <!-- Main Heading Starts -->
-                <!-- Divider Starts -->
-                <div class="divider text-center">
-                    <span class="outer-line"></span>
-                    <span class="fa fa-image" aria-hidden="true"></span>
-                    <span class="outer-line"></span>
-                </div>
-                <!-- Divider Ends -->
-                <!-- Filter Wrapper Starts -->
-                <nav>
-                    <ul class="simplefilter nav nav-pills">
-                        <!-- Filter Wrapper Items Starts -->
-                        <li class="active" data-filter="all"><i class="fa fa-reorder"></i> All Projects</li>
-                        <li data-filter="1">Images</li>
-                        <li data-filter="2">Videos</li>
-                        <li data-filter="3">External Links</li>
-                        <!-- Filter Wrapper Items Ends -->
-                    </ul>
-                </nav>
-                <!-- Filter Wrapper Ends -->
-                <div>
-                    <div class="filtr-container">
-                        <!-- Project Starts -->
-                        <div class="col-xs-12 col-sm-4 col-md-4 filtr-item" data-category="1">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="{{asset('tHomes')}}/img/projects/project-1.jpg" data-gal="magnific-pop-up[image]" title="Image project"><img class="img-responsive" src="{{asset('tHomes')}}/img/projects/project-1.jpg" alt="Image Project" /><span class="zoom-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <a class="title-link" href="image-project.html">
-                                        <h3>Single Image</h3>
-                                    </a>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                    <a class="custom-button" href="image-project.html">Read More</a>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <!-- Project Ends -->
-                        <!-- Project Starts -->
-                        <div class="col-xs-12 col-sm-4 col-md-4 filtr-item" data-category="2">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap mfp-youtube" href="https://www.youtube.com/watch?v=0gv7OC9L2s8"><img class="img-responsive" src="{{asset('tHomes')}}/img/projects/project-2.jpg" alt="Gallery project" /><span class="zoom-icon video-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <a class="title-link" href="youtube-project.html">
-                                        <h3>Youtube Video</h3>
-                                    </a>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                    <a class="custom-button" href="youtube-project.html">Read More</a>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <!-- Project Ends -->
-                        <!-- Project Starts -->
-                        <div class="col-xs-12 col-sm-4 col-md-4 filtr-item" data-category="1">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="{{asset('tHomes')}}/img/projects/project-3.jpg" data-gal="magnific-pop-up[gallery]" title="Gallery project"><img class="img-responsive" src="{{asset('tHomes')}}/img/projects/project-3.jpg" alt="Gallery project" /><span class="zoom-icon gallery-icon"></span></a>
-                                </figure>
-                                <a href="{{asset('tHomes')}}/img/projects/project-1.jpg" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="{{asset('tHomes')}}/img/projects/project-2.jpg" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="{{asset('tHomes')}}/img/projects/project-3.jpg" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="{{asset('tHomes')}}/img/projects/project-4.jpg" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="{{asset('tHomes')}}/img/projects/project-5.jpg" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="{{asset('tHomes')}}/img/projects/project-6.jpg" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <a class="title-link" href="gallery-project.html">
-                                        <h3>Gallery Photos</h3>
-                                    </a>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                    <a class="custom-button" href="gallery-project.html">Read More</a>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <!-- Project Ends -->
-                        <!-- Project Starts -->
-                        <div class="col-xs-12 col-sm-4 col-md-4 filtr-item" data-category="3">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="image-project.html" title="portfolio"><img class="img-responsive" src="img/projects/project-4.jpg" alt="portfolio" /><span class="zoom-icon external-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <a class="title-link" href="image-project.html">
-                                        <h3>External Link</h3>
-                                    </a>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                    <a class="custom-button" href="image-project.html">Read More</a>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <!-- Project Ends -->
-                        <!-- Project Starts -->
-                        <div class="col-xs-12 col-sm-4 col-md-4 filtr-item" data-category="1">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="img/projects/project-5.jpg" data-gal="magnific-pop-up[image]" title="Image project"><img class="img-responsive" src="img/projects/project-5.jpg" alt="Image Project" /><span class="zoom-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <a class="title-link" href="image-project.html">
-                                        <h3>Single Image</h3>
-                                    </a>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                    <a class="custom-button" href="image-project.html">Read More</a>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <!-- Project Ends -->
-                        <!-- Project Starts -->
-                        <div class="col-xs-12 col-sm-4 col-md-4 filtr-item" data-category="2">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap mfp-youtube" href="https://www.youtube.com/watch?v=O_C5CN1L3Xo"><img class="img-responsive" src="img/projects/project-6.jpg" alt="Gallery project" /><span class="zoom-icon video-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <a class="title-link" href="youtube-project.html">
-                                        <h3>Youtube Video</h3>
-                                    </a>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                    <a class="custom-button" href="youtube-project.html">Read More</a>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <!-- Project Ends -->
-                        <!-- Project Starts -->
-                        <div class="col-xs-12 col-sm-4 col-md-4 filtr-item" data-category="1">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="img/projects/project-7.jpg" data-gal="magnific-pop-up[image]" title="Image project"><img class="img-responsive" src="img/projects/project-7.jpg" alt="Image Project" /><span class="zoom-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <a class="title-link" href="image-project.html">
-                                        <h3>Single Image</h3>
-                                    </a>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                    <a class="custom-button" href="image-project.html">Read More</a>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <!-- Project Ends -->
-                        <!-- Project Starts -->
-                        <div class="col-xs-12 col-sm-4 col-md-4 filtr-item" data-category="2">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap mfp-vimeo" href="https://vimeo.com/23534361"><img class="img-responsive" src="img/projects/project-8.jpg" alt="Gallery project" /><span class="zoom-icon video-icon"></span></a>
-                                </figure>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <a class="title-link" href="vimeo-project.html">
-                                        <h3>Vimeo Video</h3>
-                                    </a>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                    <a class="custom-button" href="vimeo-project.html">Read More</a>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <!-- Project Ends -->
-                        <!-- Project Starts -->
-                        <div class="col-xs-12 col-sm-4 col-md-4 filtr-item" data-category="1">
-                            <div class="magnific-popup-gallery">
-                                <!-- Thumbnail Starts -->
-                                <figure class="thumbnail thumbnail__portfolio">
-                                    <a class="image-wrap" href="img/projects/project-9.jpg" data-gal="magnific-pop-up[gallery]" title="Slider project"><img class="img-responsive" src="img/projects/project-9.jpg" alt="Slider project" /><span class="zoom-icon gallery-icon"></span></a>
-                                </figure>
-                                <a href="img/projects/project-1.jpg" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="img/projects/project-2.jpg" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <a href="img/projects/project-6.jpg" title="Gallery project" data-gal="magnific-pop-up[gallery]" style="display:none;"></a>
-                                <!-- Thumbnail Ends -->
-                                <!-- Caption Starts -->
-                                <div class="caption">
-                                    <a class="title-link" href="slider-project.html">
-                                        <h3>slider project</h3>
-                                    </a>
-                                    <p>dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-                                    <a class="custom-button" href="slider-project.html">Read More</a>
-                                </div>
-                                <!-- Caption Ends -->
-                            </div>
-                        </div>
-                        <!-- Project Ends -->
-                    </div>
-                </div>
-            </div>
-            <!-- Container Ends -->
-        </section>
-        <!-- Portfolio Section Ends -->
-        <!-- Facts Section Starts -->
-        <section class="facts">
-            <div class="section-overlay">
-                <!-- Container Starts -->
-                <div class="container">
-                    <!-- Main Heading Starts -->
-                    <div class="text-center top-text">
-                        <h1><span>Cool</span> Facts</h1>
-                        <h4>our numbers</h4>
-                    </div>
-                    <!-- Main Heading Starts -->
-                    <!-- Fact Badges Starts -->
-                    <div class="fact-badges">
-                        <div class="row">
-                            <!-- Fact Badge Item Starts -->
-                            <div class="col-md-3 col-sm-6">
-                                <i class="fa fa-briefcase"></i>
-                                <h2>
-                                    <span><strong class="badges-counter">76</strong>+</span>
-                                </h2>
-                                <h4>Projects</h4>
-                            </div>
-                            <!-- Fact Badge Item Ends -->
-                            <!-- Fact Badge Item Starts -->
-                            <div class="col-md-3 col-sm-6">
-                                <i class="fa fa-clock-o"></i>
-                                <h2>
-                                    <span><strong class="badges-counter">90</strong>+</span>
-                                </h2>
-                                <h4>Hours Work</h4>
-                            </div>
-                            <!-- Fact Badge Item Ends -->
-                            <!-- Fact Badge Item Starts -->
-                            <div class="col-md-3 col-sm-6">
-                                <i class="fa fa-home"></i>
-                                <h2>
-                                    <span><strong class="badges-counter">18</strong>+</span>
-                                </h2>
-                                <h4>Offices</h4>
-                            </div>
-                            <!-- Fact Badge Item Ends -->
-                            <!-- Fact Badge Item Starts -->
-                            <div class="col-md-3 col-sm-6">
-                                <i class="fa fa-user"></i>
-                                <h2>
-                                    <span><strong class="badges-counter">67</strong>+</span>
-                                </h2>
-                                <h4>Clients</h4>
-                            </div>
-                            <!-- Fact Badge Item Ends -->
-                        </div>
-                    </div>
-                    <!-- Fact Badges Ends -->
-                </div>
-                <!-- Container Ends -->
-            </div>
-        </section>
-        <!-- facts Section Ends -->
         
         <!-- Blog Section Starts -->
         <section class="blog">
@@ -648,19 +261,16 @@
                 <div class="container">
                     <!-- Main Heading Starts -->
                     <div class="text-center top-text">
-                        <h1><span>create</span> account</h1>
-                        <h4>get started absolutely free</h4>
+                        <h1><span>Buat</span> Akun</h1>
+                        <h4>Buat Akun Secara Gratis</h4>
                     </div>
                     <!-- Main Heading Starts -->
                     <!-- Call To Action Starts -->
                     <div class="call-to-action-content">
                         <ul>
-                            <li>No Credit Card Required</li>
-                            <li>100% Match Deposit Bonus</li>
-                            <li>Monthly Free Files</li>
-                            <li>Daily Newsletter</li>
+                            <li>Pendaftaran Akun Gratis</li>
                         </ul>
-                        <a class="custom-button" href="register.html">register now</a>
+                        <a class="custom-button" href="{{route('register')}}">Daftar Sekarang</a>
                     </div>
                     <!-- Call To Action Ends -->
                 </div>
@@ -673,13 +283,13 @@
             <div class="container">
                 <ul class="bxslider" id="bxslider">
                     <!-- Logos Items Starts -->
-                    <li><img id="3docean" src="img/logos-slider/3docean-dark-background.png" alt="3docean"></li>
-                    <li><img id="activeden" src="img/logos-slider/activeden-dark-background.png" alt="activeden"></li>
-                    <li><img id="audiojungle" src="img/logos-slider/audiojungle-dark-background.png" alt="audiojungle"></li>
-                    <li><img id="codecanyon" src="img/logos-slider/codecanyon-dark-background.png" alt="codecanyon"></li>
-                    <li><img id="graphicriver" src="img/logos-slider/graphicriver-dark-background.png" alt="graphicriver"></li>
-                    <li><img id="photodune" src="img/logos-slider/photodune-dark-background.png" alt="photodune"></li>
-                    <li><img id="themeforest" src="img/logos-slider/themeforest-dark-background.png" alt="themeforest"></li>
+                    <li><img id="3docean" src="/images/logo/logo.png" style="max-width: 100%" alt="3docean"></li>
+                    <li><img id="activeden" src="/images/logo/logo.png" style="max-width: 100%" alt="activeden"></li>
+                    <li><img id="audiojungle" src="/images/logo/logo.png" style="max-width: 100%" alt="audiojungle"></li>
+                    <li><img id="codecanyon" src="/images/logo/logo.png" style="max-width: 100%" alt="codecanyon"></li>
+                    <li><img id="graphicriver" src="/images/logo/logo.png" style="max-width: 100%" alt="graphicriver"></li>
+                    <li><img id="photodune" src="/images/logo/logo.png" style="max-width: 100%" alt="photodune"></li>
+                    <li><img id="themeforest" src="/images/logo/logo.png" style="max-width: 100%" alt="themeforest"></li>
                     <!-- Logos Items Ends -->
                 </ul>
             </div>

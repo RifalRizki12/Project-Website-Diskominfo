@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\DataDiri;
 use App\Models\Post;
 use Auth;
+use Storage;
 
 class DataAdminController extends Controller
 {
@@ -21,7 +22,7 @@ class DataAdminController extends Controller
     {
         $this->validate($request,[
             'email' => 'required|email|unique:users',
-            'avatar' => 'mimes:jpeg,png,jpg,gif,svg',
+            // 'avatar' => 'mimes:jpeg,png,jpg,gif,svg',
         ]);
         
         //insert ke tabel Users
@@ -42,14 +43,10 @@ class DataAdminController extends Controller
         //insert ke tabel control
         $request->request->add(['user_id' => $user->id ]);
         $datadiri = \App\models\DataDiri::create($request->all());
-        if($request->hasFile('avatar')){
-            $request->file('avatar')->move('images/profile/data-diri/',$request->file('avatar')->getClientOriginalName());
-            $datadiri->avatar = $request->file('avatar')->getClientOriginalName();
-            $datadiri->save();
-        }
+
         $datadiri->save();
 
-        return redirect('/dataAdmin');
+        return redirect('/dataAdmin')->with('sukses','Data Berhasil Ditambahkan');
     }
 
     public function edit($id)
@@ -71,13 +68,13 @@ class DataAdminController extends Controller
         $data=$request->all();
         // unset($data['email']);
         $admin->update($data);
-        if($request->hasFile('avatar')){
-            $request->file('avatar')->move('images/profile/data-diri/',$request->file('avatar')->getClientOriginalName());
-            $admin->avatar = $request->file('avatar')->getClientOriginalName();
-            $admin->save();
-        }
+        // if($request->hasFile('avatar')){
+        //     $request->file('avatar')->move('images/profile/data-diri/',$request->file('avatar')->getClientOriginalName());
+        //     $admin->avatar = $request->file('avatar')->getClientOriginalName();
+        // }
+        $admin->save();
 
-        return redirect('dataAdmin');
+        return redirect('dataAdmin')->with('update','Data Berhasil Diedit');
         
     }
 
@@ -85,11 +82,12 @@ class DataAdminController extends Controller
     {
         $data = DataDiri::where('id',$id)->first();
         $user = \App\User::find($data->user_id);
-        Storage::delete($data->thumbnail);
+        $post = \App\Models\Post::find($user->id);
 
         $data->delete();
         $user->delete();
-        return redirect()->back();
+        $post->delete();
+        return redirect()->back()->with('delete','Data Berhasil Dihapus');
     }
 
     public function profileSaya()
@@ -101,8 +99,9 @@ class DataAdminController extends Controller
     public function profile($id)
     {
         $data = DataDiri::where('id',$id)->first();
+        $posts = Post::all();
 
-        return view('vAdmins.adminProfile',compact(['data']));
+        return view('vAdmins.adminProfile',compact(['data','posts']));
     }
 
 }
